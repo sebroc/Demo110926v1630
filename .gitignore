@@ -1,0 +1,7 @@
+__pycache__/
+PreTeXt/output/
+PreTeXt/generated-assets/
+PreTeXt/.cache/
+PreTeXt/logs/
+PreTeXt/build.log
+.DS_Store

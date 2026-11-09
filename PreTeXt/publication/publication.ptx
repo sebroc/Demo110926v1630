@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication>
+  <common><chunking level="2"/><tableofcontents level="2"/><exercise-project statement="yes" hint="yes" answer="yes" solution="yes"/></common>
+  <source><directories external="../assets" generated="../generated-assets"/></source>
+  <numbering><divisions level="2"/></numbering>
+  <html><knowl project="no" theorem="no" definition="no" remark="no"/><index-page ref="lecture-notes"/></html>
+</publication>

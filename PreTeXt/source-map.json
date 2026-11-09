@@ -1,0 +1,954 @@
+[
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "remark",
+    "number": 1,
+    "id": "c1-remark-n1"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "activity",
+    "number": 2,
+    "id": "c1-activity-n2"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "activity",
+    "number": 3,
+    "id": "c1-activity-n3"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "activity",
+    "number": 4,
+    "id": "c1-activity-n4"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "note",
+    "number": 5,
+    "id": "c1-note-n5"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "activity",
+    "number": 6,
+    "id": "c1-activity-n6"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "activity",
+    "number": 7,
+    "id": "c1-activity-n7"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "theorem",
+    "number": 8,
+    "id": "c1-theorem-n8"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "activity",
+    "number": 9,
+    "id": "c1-activity-n9"
+  },
+  {
+    "chapter": 1,
+    "section": "1.1",
+    "kind": "definition",
+    "number": 10,
+    "id": "c1-definition-n10"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 11,
+    "id": "c1-activity-n11"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "definition",
+    "number": 12,
+    "id": "c1-definition-n12"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 13,
+    "id": "c1-activity-n13"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "definition",
+    "number": 14,
+    "id": "c1-definition-n14"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "definition",
+    "number": 15,
+    "id": "c1-definition-n15"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "theorem",
+    "number": 16,
+    "id": "c1-theorem-n16"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 17,
+    "id": "c1-activity-n17"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "theorem",
+    "number": 18,
+    "id": "c1-theorem-n18"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 19,
+    "id": "c1-activity-n19"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 20,
+    "id": "c1-activity-n20"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "definition",
+    "number": 21,
+    "id": "c1-definition-n21"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 22,
+    "id": "c1-activity-n22"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 23,
+    "id": "c1-activity-n23"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "definition",
+    "number": 24,
+    "id": "c1-definition-n24"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 25,
+    "id": "c1-activity-n25"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 26,
+    "id": "c1-activity-n26"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "theorem",
+    "number": 27,
+    "id": "c1-theorem-n27"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 28,
+    "id": "c1-activity-n28"
+  },
+  {
+    "chapter": 1,
+    "section": "1.2",
+    "kind": "activity",
+    "number": 29,
+    "id": "c1-activity-n29"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "activity",
+    "number": 30,
+    "id": "activity-homogeneous-solutions"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "theorem",
+    "number": 31,
+    "id": "c1-theorem-n31"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "definition",
+    "number": 32,
+    "id": "c1-definition-n32"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "activity",
+    "number": 33,
+    "id": "c1-activity-n33"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "activity",
+    "number": 34,
+    "id": "c1-activity-n34"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "fact",
+    "number": 35,
+    "id": "c1-fact-n35"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "activity",
+    "number": 36,
+    "id": "c1-activity-n36"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "definition",
+    "number": 37,
+    "id": "c1-definition-n37"
+  },
+  {
+    "chapter": 1,
+    "section": "1.3",
+    "kind": "theorem",
+    "number": 38,
+    "id": "c1-theorem-n38"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "definition",
+    "number": 1,
+    "id": "c2-definition-n1"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 2,
+    "id": "c2-activity-n2"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "definition",
+    "number": 3,
+    "id": "c2-definition-n3"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 4,
+    "id": "c2-activity-n4"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 5,
+    "id": "c2-activity-n5"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "note",
+    "number": 6,
+    "id": "c2-note-n6"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 7,
+    "id": "c2-activity-n7"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "definition",
+    "number": 8,
+    "id": "c2-definition-n8"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 9,
+    "id": "c2-activity-n9"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "definition",
+    "number": 10,
+    "id": "c2-definition-n10"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 11,
+    "id": "c2-activity-n11"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "definition",
+    "number": 12,
+    "id": "c2-definition-n12"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "definition",
+    "number": 13,
+    "id": "c2-definition-n13"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "activity",
+    "number": 14,
+    "id": "c2-activity-n14"
+  },
+  {
+    "chapter": 2,
+    "section": "2.1",
+    "kind": "note",
+    "number": 15,
+    "id": "c2-note-n15"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 16,
+    "id": "c2-definition-n16"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 17,
+    "id": "c2-activity-n17"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 18,
+    "id": "c2-activity-n18"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 19,
+    "id": "c2-definition-n19"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 20,
+    "id": "c2-activity-n20"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "theorem",
+    "number": 21,
+    "id": "c2-theorem-n21"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 22,
+    "id": "c2-activity-n22"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 23,
+    "id": "c2-activity-n23"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 24,
+    "id": "c2-definition-n24"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 25,
+    "id": "c2-activity-n25"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 26,
+    "id": "c2-definition-n26"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 27,
+    "id": "c2-activity-n27"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "theorem",
+    "number": 28,
+    "id": "c2-theorem-n28"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 29,
+    "id": "c2-activity-n29"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 30,
+    "id": "c2-definition-n30"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "fact",
+    "number": 31,
+    "id": "c2-fact-n31"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 32,
+    "id": "c2-activity-n32"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 33,
+    "id": "c2-definition-n33"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 34,
+    "id": "c2-activity-n34"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "fact",
+    "number": 35,
+    "id": "c2-fact-n35"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "theorem",
+    "number": 36,
+    "id": "c2-theorem-n36"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 37,
+    "id": "c2-activity-n37"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 38,
+    "id": "c2-definition-n38"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 39,
+    "id": "c2-activity-n39"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "definition",
+    "number": 40,
+    "id": "c2-definition-n40"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 41,
+    "id": "c2-activity-n41"
+  },
+  {
+    "chapter": 2,
+    "section": "2.2",
+    "kind": "activity",
+    "number": 42,
+    "id": "c2-activity-n42"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "definition",
+    "number": 43,
+    "id": "c2-definition-n43"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "activity",
+    "number": 44,
+    "id": "c2-activity-n44"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "activity",
+    "number": 45,
+    "id": "c2-activity-n45"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "fact",
+    "number": 46,
+    "id": "c2-fact-n46"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "theorem",
+    "number": 47,
+    "id": "c2-theorem-n47"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "activity",
+    "number": 48,
+    "id": "c2-activity-n48"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "activity",
+    "number": 49,
+    "id": "c2-activity-n49"
+  },
+  {
+    "chapter": 2,
+    "section": "2.3",
+    "kind": "activity",
+    "number": 50,
+    "id": "c2-activity-n50"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "definition",
+    "number": 51,
+    "id": "c2-definition-n51"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "activity",
+    "number": 52,
+    "id": "c2-activity-n52"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "activity",
+    "number": 53,
+    "id": "c2-activity-n53"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "theorem",
+    "number": 54,
+    "id": "c2-theorem-n54"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "activity",
+    "number": 55,
+    "id": "c2-activity-n55"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "theorem",
+    "number": 56,
+    "id": "c2-theorem-n56"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "corollary",
+    "number": 57,
+    "id": "c2-corollary-n57"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "activity",
+    "number": 58,
+    "id": "c2-activity-n58"
+  },
+  {
+    "chapter": 2,
+    "section": "2.4",
+    "kind": "activity",
+    "number": 59,
+    "id": "c2-activity-n59"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "definition",
+    "number": 60,
+    "id": "c2-definition-n60"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 61,
+    "id": "c2-activity-n61"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 62,
+    "id": "c2-activity-n62"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "theorem",
+    "number": 63,
+    "id": "c2-theorem-n63"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 64,
+    "id": "c2-activity-n64"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 65,
+    "id": "c2-activity-n65"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 66,
+    "id": "c2-activity-n66"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "definition",
+    "number": 67,
+    "id": "c2-definition-n67"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "theorem",
+    "number": 68,
+    "id": "c2-theorem-n68"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 69,
+    "id": "c2-activity-n69"
+  },
+  {
+    "chapter": 2,
+    "section": "2.5",
+    "kind": "activity",
+    "number": 70,
+    "id": "c2-activity-n70"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 1,
+    "id": "c3-definition-n1"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 2,
+    "id": "c3-activity-n2"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 3,
+    "id": "c3-definition-n3"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 4,
+    "id": "c3-activity-n4"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 5,
+    "id": "c3-definition-n5"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 6,
+    "id": "c3-activity-n6"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 7,
+    "id": "c3-definition-n7"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 8,
+    "id": "c3-activity-n8"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 9,
+    "id": "activity-determinant-zero-row"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 10,
+    "id": "c3-activity-n10"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 11,
+    "id": "c3-definition-n11"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 12,
+    "id": "activity-triangular-determinant"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 13,
+    "id": "c3-definition-n13"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "definition",
+    "number": 14,
+    "id": "c3-definition-n14"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "theorem",
+    "number": 15,
+    "id": "c3-theorem-n15"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "theorem",
+    "number": 16,
+    "id": "c3-theorem-n16"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "theorem",
+    "number": 17,
+    "id": "c3-theorem-n17"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "theorem",
+    "number": 18,
+    "id": "c3-theorem-n18"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "theorem",
+    "number": 19,
+    "id": "c3-theorem-n19"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "fact",
+    "number": 20,
+    "id": "c3-fact-n20"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "theorem",
+    "number": 21,
+    "id": "c3-theorem-n21"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 22,
+    "id": "c3-activity-n22"
+  },
+  {
+    "chapter": 3,
+    "section": "3.1",
+    "kind": "activity",
+    "number": 23,
+    "id": "c3-activity-n23"
+  },
+  {
+    "chapter": 3,
+    "section": "3.2",
+    "kind": "theorem",
+    "number": 24,
+    "id": "c3-theorem-n24"
+  },
+  {
+    "chapter": 3,
+    "section": "3.2",
+    "kind": "activity",
+    "number": 25,
+    "id": "c3-activity-n25"
+  },
+  {
+    "chapter": 3,
+    "section": "3.2",
+    "kind": "theorem",
+    "number": 26,
+    "id": "c3-theorem-n26"
+  },
+  {
+    "chapter": 3,
+    "section": "3.2",
+    "kind": "theorem",
+    "number": 27,
+    "id": "c3-theorem-n27"
+  },
+  {
+    "chapter": 3,
+    "section": "3.2",
+    "kind": "activity",
+    "number": 28,
+    "id": "c3-activity-n28"
+  }
+]

@@ -1,0 +1,3445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATED: edit Notes/**/*.tex instead. -->
+<pretext>
+  <docinfo>
+    <macros>
+\newcommand{\aaa}[2]{{a_{#1#2}}}
+\newcommand{\aij}{{a_{ij}}}
+\newcommand{\bbb}[2]{{b_{#1#2}}}
+\newcommand{\bij}{{b_{ij}}}
+\newcommand{\ccc}[2]{{c_{#1#2}}}
+\newcommand{\cij}{{c_{ij}}}
+
+
+\newcommand{\Aij}{{A_{ij}}}
+\newcommand{\Mij}{{M_{ij}}}
+
+
+
+\newcommand{\mbyn}{{m \times n}}
+\newcommand{\nbyn}{{n \times n}}
+
+
+\newcommand{\veca}{{\vec{a}}}
+\newcommand{\bmata}{{\left[ \begin{array}{r} a_1 \\ a_2 \\ \ldots \\ a_n \end{array} \right] }}
+\newcommand{\bmatb}{{\left[ \begin{array}{r} b_1 \\ b_2 \\ \ldots \\ b_n \end{array} \right] }}
+\newcommand{\bmatx}{{\left[ \begin{array}{r} x_1 \\ x_2 \\ \ldots \\ x_n \end{array} \right]}}
+
+\newcommand{\colvec}[1]{{\left[ \begin{array}{r} #1 \end{array} \right]}}
+\newcommand{\ccolvec}[1]{{\left[ \begin{array}{c} #1 \end{array} \right]}}
+\newcommand{\twovec}[2]{{\left[ \begin{array}{r} #1 \\ #2 \end{array} \right]}}
+\newcommand{\threevec}[3]{{\left[ \begin{array}{r} #1 \\ #2 \\ #3 \end{array} \right]}}
+\newcommand{\fourvec}[4]{{\left[ \begin{array}{r} #1 \\ #2 \\ #3 \\ #4 \end{array} \right]}}
+
+\newcommand{\colvecb}{{\left[ \begin{array}{c} b_1 \\ b_2 \\ \vdots \\ b_n \end{array} \right]}}
+\newcommand{\colvecbm}{{\left[ \begin{array}{c} b_1 \\ b_2 \\ \vdots \\ b_m \end{array} \right]}}
+\newcommand{\colvecc}{{\left[ \begin{array}{c} c_1 \\ c_2 \\ \vdots \\ c_n \end{array} \right]}}
+\newcommand{\colvecx}{{\left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right]}}
+
+\newcommand{\threerowvec}[3]{{\left[ \begin{array}{rrr} #1 &amp; #2 &amp; #3 \end{array} \right]}}
+\newcommand{\fourrowvec}[4]{{\left[ \begin{array}{rrr} #1 &amp; #2 &amp; #3 &amp; #4 \end{array} \right]}}
+
+
+\newcommand{\twobytwo}[4]{{\left[ \begin{array}{rr} #1 &amp; #2 \\ #3 &amp; #4 \end{array} \right]}}
+\newcommand{\cIthree}[1]{{\left[ \begin{array}{rrr} #1 &amp; 0 &amp; 0 \\ 0 &amp; #1 &amp; 0 \\ 0 &amp; 0 &amp; #1 \end{array} \right]}}
+\newcommand{\barray}[2]{{\left[ \begin{array}{#1} #2 \end{array} \right]}}
+\newcommand{\Amn}{{\left[ \begin{array}{cccc} 
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ 
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{array} \right]}}
+\newcommand{\Ann}{{\left[ \begin{array}{cccc} 
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ 
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{array} \right]}}
+\newcommand{\Amnb}{{\left[ \begin{array}{cccc|c} 
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} &amp; b_1 \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} &amp; b_2 \\ 
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} &amp; b_m
+\end{array} \right]}}
+
+
+
+\newcommand{\bfa}{{\mathbf{a}}}
+\newcommand{\bfb}{{\mathbf{b}}}
+\newcommand{\bfc}{{\mathbf{c}}}
+\newcommand{\bfd}{{\mathbf{d}}}
+\newcommand{\bfe}{{\mathbf{e}}}
+\newcommand{\bff}{{\mathbf{f}}}
+\newcommand{\bfi}{{\mathbf{i}}}
+\newcommand{\bfj}{{\mathbf{j}}}
+\newcommand{\bfk}{{\mathbf{k}}}
+\newcommand{\bfu}{{\mathbf{u}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+\newcommand{\bfx}{{\mathbf{x}}}
+\newcommand{\bfy}{{\mathbf{y}}}
+\newcommand{\bfz}{{\mathbf{z}}}
+\newcommand{\bfzero}{{\mathbf{0}}}
+\newcommand{\bfone}{{\mathbf{1}}}
+
+
+
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\Tr}{tr}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\minor}{minor}
+\DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\nool}{null}\newcommand{\dashline}{\mathrel{\vert}}\newcommand{\bbR}{\mathbb{R}}\newcommand{\Ainv}{A^{-1}}\newcommand{\inv}{{^{-1}}}\newcommand{\ddd}{\mathrm{d}}</macros>
+    <rename element="axiom">Fact</rename>
+  </docinfo>
+  <book xml:id="lecture-notes">
+    <title>Math 345: Linear Algebra</title>
+    <subtitle>Lecture Notes</subtitle>
+    <frontmatter>
+      <bibinfo>
+        <author>
+          <personname>Sebastien Roch</personname>
+        </author>
+      </bibinfo>
+      <titlepage>
+        <titlepage-items />
+      </titlepage>
+    </frontmatter>
+    <chapter xml:id="chapter-1">
+      <title>Systems of Linear Equations</title>
+      <introduction>
+        <p> These notes use material from your textbook <em>Linear Algebra with Applications</em> by W. Keith Nicholson [LAWA]. Sections are numbered in their order of presentation within each chapter.</p>
+        <p>Learning goals:</p>
+        <p>
+          <ul>
+            <li>
+              <p>Be able to set up an augmented matrix for a linear system of equations and be able to interpret an augmented matrix as a linear system of equations</p>
+            </li>
+            <li>
+              <p>Be able to perform elementary row operations to a matrix</p>
+            </li>
+            <li>
+              <p>Know how to find a REF or the RREF form for a matrix</p>
+            </li>
+            <li>
+              <p>Be able to solve linear system using the method of Gaussian Elimination</p>
+            </li>
+            <li>
+              <p>Be able to find the rank of a matrix and know what it tells you about the number of solutions for the corresponding linear system</p>
+            </li>
+            <li>
+              <p>Know how to build the basic solutions for a homogeneous system</p>
+            </li>
+            <li>
+              <p>Know how to determine the number of basic solutions of a homogeneous system using the rank</p>
+            </li>
+          </ul>
+        </p>
+      </introduction>
+      <section xml:id="section-1-1">
+        <title>Solutions and Elementary Operations</title>
+        <remark xml:id="c1-remark-n1">
+          <p>Codex is fun!</p>
+        </remark>
+        <activity xml:id="c1-activity-n2">
+          <statement>
+            <p>In a Wisconsin forest, there are robins and badgers. Together they have 18 heads and 56 legs. How many robins and badgers are in the forest?</p>
+          </statement>
+          <solution>
+            <p>
+              <m>x</m> = number of robins, <m>y</m> = number of badgers <me>\begin{aligned}
+x + y &amp;= 18 \quad \text{(heads)} \\
+2x + 4y &amp;= 56 \quad \text{(legs)}
+\end{aligned}</me> From first equation: <m>y = 18-x</m> Substitute into second: <me>\begin{aligned}
+2x + 4(18-x) &amp;= 56 \\
+2x + 72 - 4x &amp;= 56 \\
+-2x &amp;= -16 \\
+x &amp;= 8 \quad \text{robins} \\
+y &amp;= 10 \quad \text{badgers}
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <p>An equation of the form <me>a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b</me> is called a <alert>linear equation</alert>. The real quantities <m>a_1, \ldots, a_n, b</m> are <alert>constants</alert>, while the variables <m>x_1, \ldots, x_n</m> represent <alert>unknowns</alert>.</p>
+        <activity xml:id="c1-activity-n3">
+          <statement>
+            <p>Identify the constants and unknowns in each linear equation in the first activity.</p>
+          </statement>
+          <solution>
+            <p>
+              <me>\begin{aligned}
+        x + y &amp;= 18: &amp; \text{constants} \; 1,1,18; &amp; \text{ unknowns} \; x,y \\
+        2x + 4y &amp;= 56: &amp; \text{constants} \; 2,4,56; &amp; \text{ unknowns} \; x,y
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n4">
+          <statement>
+            <p>What are some equations that are not linear equations?</p>
+          </statement>
+          <solution>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>x^2 + y = 1</m> (contains squared term)</p>
+                </li>
+                <li>
+                  <p>
+                    <m>xy = 2</m> (contains product of variables)</p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sin(x) + y = 0</m> (contains trigonometric function)</p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sqrt{x} + y = 1</m> (contains square root)</p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </activity>
+        <p>More generally, a <alert>system of linear equations</alert> or <alert>linear system</alert> is a set of <m>m</m> linear equations each in <m>n</m> unknowns. A linear system has the form <me>\begin{array}{lllllll}
+a_{11}x_1 + &amp; a_{12}x_2 + &amp; \cdots + &amp; a_{1n}x_n &amp; = &amp; b_1 &amp; \\
+a_{21}x_1 + &amp; a_{22}x_2 + &amp; \cdots + &amp; a_{2n}x_n &amp; = &amp; b_2 &amp; \\ 
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; &amp; \vdots &amp; (*) \\ 
+a_{m1}x_1 + &amp; a_{m2}x_2 + &amp; \cdots + &amp; a_{mn}x_n &amp; = &amp; b_m. &amp; 
+\end{array}</me> A <alert>solution</alert> to the linear system <m>(*)</m> is a sequence of <m>n</m> numbers <m>s_1, \ldots, s_n</m> so that <em>each</em> equation in <m>(*)</m> is satisfied when <m>x_1 = s_1</m>, <m>x_2 = s_2</m>, <m>\ldots</m>, <m>x_n = s_n</m> are substituted.</p>
+        <p>Let <m>(*)</m> be a linear system as above.</p>
+        <p>
+          <ul>
+            <li>
+              <p>If <m>(*)</m> has <em>no</em> solution, it is called <alert>inconsistent</alert>.</p>
+            </li>
+            <li>
+              <p>If <m>(*)</m> has a solution, it is called <alert>consistent</alert>. (Note that it may have infinitely many solutions!)</p>
+            </li>
+            <li>
+              <p>If <m>(*)</m> has <m>b_1 = b_2 = \cdots = b_n = 0</m>, it is called a <alert>homogeneous system</alert>.</p>
+              <p>
+                <ul>
+                  <li>
+                    <p>Note that <m>x_1 = x_2 = \cdots = x_n = 0</m> is always a solution to a homogeneous system. It is called the <alert>trivial</alert> solution.</p>
+                  </li>
+                  <li>
+                    <p>A solution to a homogeneous system where <em>not</em> each <m>x_i</m> is <m>0</m> is called a <alert>nontrivial</alert> solution.</p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>Consider another system of <m>r</m> linear equations in <m>n</m> unknowns: <me>\begin{array}{lllllll}
+c_{11}x_1 + &amp; c_{12}x_2 + &amp; \cdots + &amp; c_{1n}x_n &amp; = &amp; d_1 &amp; \\
+c_{21}x_1 + &amp; c_{22}x_2 + &amp; \cdots + &amp; c_{2n}x_n &amp; = &amp; d_2 &amp; \\ 
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; &amp; \vdots &amp; (**) \\ 
+c_{r1}x_1 + &amp; c_{r2}x_2 + &amp; \cdots + &amp; c_{rn}x_n &amp; = &amp; d_r. &amp; 
+\end{array}</me> The systems <m>(*)</m> and <m>(**)</m> are <alert>equivalent</alert> if they have exactly the same solutions.</p>
+        <note xml:id="c1-note-n5">
+          <p>In <m>3d</m> space, i.e., in three variables or unknowns, lines and planes are examples of systems of linear equations with inifinitely many solutions. When two distinct planes are parallel, i.e., when their normal vector is parallel, the intersection is empty—put differently, no solutions exist to the system of equations made of the equations in general form.</p>
+        </note>
+        <activity xml:id="c1-activity-n6">
+          <statement>
+            <p>In another Wisconsin forest, there are also robins and badgers. Together they have 18 heads, 36 eyes, and 56 legs. How many robins and badgers are in the forest? Can we use any new terminology to describe this system?</p>
+          </statement>
+          <solution>
+            <p>
+              <m>x</m> = number of robins, <m>y</m> = number of badgers <me>\begin{aligned}
+    x + y &amp;= 18 \quad \text{(heads)} \\
+    2x + 2y &amp;= 36 \quad \text{(eyes)} \\
+    2x + 4y &amp;= 56 \quad \text{(legs)}
+\end{aligned}</me> Note that second equation gives <m>x + y = 18</m> (after dividing each side by <m>2</m>), same as first equation.</p>
+            <p>From first equation: <m>y = 18-x</m>
+            </p>
+            <p>Substitute into third: <me>\begin{aligned}
+    2x + 4(18-x) &amp;= 56 \\
+    2x + 72 - 4x &amp;= 56 \\
+    -2x &amp;= -16 \\
+    x &amp;= 8 \quad \text{robins} \\
+    y &amp;= 18 - 8 = 10 \quad \text{badgers}
+\end{aligned}</me> This is a system of three linear equations in two unknowns. It is consistent.</p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n7">
+          <statement>
+            <p>In a third Wisconsin forest, there are deer and badgers. Together they have 18 heads and 70 legs. How many deer and badgers are in the forest? Can we use any new terminology to describe this system?</p>
+          </statement>
+          <solution>
+            <p>
+              <m>x</m> = number of deer, <m>y</m> = number of badgers <me>\begin{aligned}
+        x + y &amp;= 18 \quad \text{(heads)} \\
+        4x + 4y &amp;= 70 \quad \text{(legs)}
+    
+\end{aligned}</me> From second equation: <me>\begin{aligned}
+        4(x + y) &amp;= 70 \\
+        x + y &amp;= \frac{70}{4} = 17.5
+    
+\end{aligned}</me> This system is inconsistent since first equation gives <m>x + y = 18</m> but second gives <m>x + y = 17.5</m> (Try substituting the first equation into the second one.)</p>
+          </solution>
+        </activity>
+        <theorem xml:id="c1-theorem-n8">
+          <statement>
+            <p>The following operations, called <alert>elementary operations</alert>, can be performed on systems of linear equations to produce <alert>equivalent</alert> systems.</p>
+            <p>
+              <ol marker="1.">
+                <li>
+                  <p>
+                    <alert>Interchange</alert> the <m>i</m>th and <m>j</m>th equations.</p>
+                </li>
+                <li>
+                  <p>
+                    <alert>Multiply</alert> an equation by a nonzero constant.</p>
+                </li>
+                <li>
+                  <p>
+                    <alert>Replace</alert> the <m>i</m>th equation by <m>c</m> times the <m>j</m>th equation <em>plus</em> the <m>i</m>th equation.</p>
+                </li>
+              </ol>
+            </p>
+            <p>We can track these operations more easily using an array/matrix to record the coefficients. The <alert>coefficient matrix</alert> of the linear system is the <m>m\times n</m> matrix <m>A</m>:</p>
+            <p>
+              <me>\begin{array}{llllll}
+a_{11}x_1 + &amp; a_{12}x_2 + &amp; \cdots + &amp; a_{1n}x_n &amp; = &amp; b_1 \\
+a_{21}x_1 + &amp; a_{22}x_2 + &amp; \cdots + &amp; a_{2n}x_n &amp; = &amp; b_2 \\ 
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; &amp; \vdots \\ 
+a_{m1}x_1 + &amp; a_{m2}x_2 + &amp; \cdots + &amp; a_{mn}x_n &amp; = &amp; b_m
+\end{array}</me>
+            </p>
+            <p>
+              <me>A = \begin{bmatrix}
+{a_{11}} &amp; {a_{12}} &amp; \cdots &amp; \cdots &amp; \cdots &amp; {a_{1n}} \\ 
+{a_{21}} &amp; {a_{22}} &amp; \cdots &amp; \cdots &amp; \cdots &amp; {a_{2n}} \\ 
+\vdots &amp; \vdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \vdots  \\ 
+\vdots &amp; \vdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \vdots \\ 
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; \cdots &amp; \cdots &amp; a_{mn} \\ 
+\end{bmatrix}</me>
+            </p>
+            <p>We can also build a matrix that includes the constants on the right-hand side of the linear system. First, note that</p>
+            <p>
+              <me>\mathbf{b}=\begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_m\end{bmatrix}</me>
+            </p>
+            <p>is a <m>m \times 1</m> matrix (called the <alert>constant matrix</alert>) representing the constant terms of the linear equations (this is also called a <alert>vector</alert> or <alert>column vector</alert>). We can adjoin <m>\mathbf{b}</m> to matrix <m>A</m> to create the <alert>augmented matrix</alert> representing our linear system:</p>
+            <p>
+              <me>[A \mathrel{\vert}{\mathbf{b}}]=
+{\left[ \begin{array}{cccc|c} 
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} &amp; b_1 \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} &amp; b_2 \\ 
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} &amp; b_m
+\end{array} \right]}</me>
+            </p>
+          </statement>
+        </theorem>
+        <activity xml:id="c1-activity-n9">
+          <statement>
+            <p>Consider the linear system <me>\begin{array}{rrrrrrr}
+    &amp;  &amp; y &amp; - &amp; z &amp; = &amp; 4  \\
+    2x &amp; + &amp; &amp;  &amp; 6z &amp; = &amp; 4 \\ 
+    3x &amp; + &amp; 2y &amp; + &amp; 2z &amp; = &amp; -1
+\end{array}</me> The system is reduced to a simpler system using elementary operations. Find the augmented matrix for the linear systems, then record the resulting matrices.</p>
+            <p>
+              <fillin characters="12" />
+              <em> (1)</em>
+              <me>\begin{array}{rrrrrrr}
+    2x &amp; + &amp; &amp;  &amp; 6z &amp; = &amp; 4 \\ 
+    &amp;  &amp; y &amp; - &amp; z &amp; = &amp; 4  \\
+    3x &amp; + &amp; 2y &amp; + &amp; 2z &amp; = &amp; -1
+\end{array}</me>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (2)</em>
+              <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; &amp;  &amp; 3z &amp; = &amp; 2\\ 
+    &amp;  &amp; y &amp; - &amp; z &amp; = &amp; 4  \\
+    3x &amp; + &amp; 2y &amp; + &amp; 2z &amp; = &amp; -1
+\end{array}</me>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (3)</em>
+              <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; &amp;  &amp; 3z &amp; = &amp; 2\\ 
+    &amp;  &amp; y &amp; - &amp; z &amp; = &amp; 4  \\
+    &amp;  &amp; 2y &amp; - &amp; 7z &amp; = &amp; -7
+\end{array}</me>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (4)</em>
+              <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; &amp;  &amp; 3z &amp; = &amp; 2\\ 
+    &amp;  &amp; y &amp; - &amp; z &amp; = &amp; 4  \\
+    &amp;  &amp; &amp; - &amp; 5z &amp; = &amp; -15
+\end{array}</me>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (5)</em>
+              <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; &amp;  &amp; 3z &amp; = &amp; 2\\ 
+    &amp;  &amp; y &amp; - &amp; z &amp; = &amp; 4  \\
+    &amp;  &amp; &amp; &amp; z &amp; = &amp; 3
+\end{array}</me>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (6)</em>
+              <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; &amp;  &amp; 3z &amp; = &amp; 2\\ 
+    &amp;  &amp; y &amp;  &amp;  &amp; = &amp; 7 \\
+    &amp;  &amp; &amp; &amp; z &amp; = &amp; 3
+\end{array}</me>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (7)</em>
+              <me>\begin{array}{rrrrrrr}
+    x &amp;  &amp; &amp;  &amp; &amp; = &amp; -7\\ 
+    &amp;  &amp; y &amp;  &amp;  &amp; = &amp; 7 \\
+    &amp;  &amp; &amp; &amp; z &amp; = &amp; 3
+\end{array}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>Initial augmented matrix: <me>\left[\begin{array}{ccc|c}
+        0 &amp; 1 &amp; -1 &amp; 4 \\
+        2 &amp; 0 &amp; 6 &amp; 4 \\
+        3 &amp; 2 &amp; 2 &amp; -1
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>Interchange rows 1 and 2:</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        2 &amp; 0 &amp; 6 &amp; 4 \\
+        0 &amp; 1 &amp; -1 &amp; 4 \\
+        3 &amp; 2 &amp; 2 &amp; -1
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 2.</em>
+            </p>
+            <p>Divide first row by 2:</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        1 &amp; 0 &amp; 3 &amp; 2 \\
+        0 &amp; 1 &amp; -1 &amp; 4 \\
+        3 &amp; 2 &amp; 2 &amp; -1
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 3.</em>
+            </p>
+            <p>Replace row 3 by row 3 - 3(row 1):</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        1 &amp; 0 &amp; 3 &amp; 2 \\
+        0 &amp; 1 &amp; -1 &amp; 4 \\
+        0 &amp; 2 &amp; -7 &amp; -7
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 4.</em>
+            </p>
+            <p>Replace row 3 by row 3 - 2(row 2):</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        1 &amp; 0 &amp; 3 &amp; 2 \\
+        0 &amp; 1 &amp; -1 &amp; 4 \\
+        0 &amp; 0 &amp; -5 &amp; -15
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 5.</em>
+            </p>
+            <p>Multiply row 3 by -1/5:</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        1 &amp; 0 &amp; 3 &amp; 2 \\
+        0 &amp; 1 &amp; -1 &amp; 4 \\
+        0 &amp; 0 &amp; 1 &amp; 3
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 6.</em>
+            </p>
+            <p>Replace row 2 by row 2 + row 3:</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        1 &amp; 0 &amp; 3 &amp; 2 \\
+        0 &amp; 1 &amp; 0 &amp; 7 \\
+        0 &amp; 0 &amp; 1 &amp; 3
+    \end{array}\right]</me>
+            </p>
+            <p>
+              <em>Blank 7.</em>
+            </p>
+            <p>Replace row 1 by row 1 - 3(row 3):</p>
+            <p>
+              <me>\left[\begin{array}{ccc|c}
+        1 &amp; 0 &amp; 0 &amp; -7 \\
+        0 &amp; 1 &amp; 0 &amp; 7 \\
+        0 &amp; 0 &amp; 1 &amp; 3
+    \end{array}\right]</me>
+            </p>
+          </solution>
+        </activity>
+        <p>Notice that when we apply the elementary operations to the matrix, they change the rows of the matrix.</p>
+        <definition xml:id="c1-definition-n10">
+          <statement>
+            <p>An <alert>elementary row operation</alert> on a matrix <m>A</m> is any one of the following operations:</p>
+            <p>
+              <ol marker="(a)">
+                <li>
+                  <p>Type I: <alert>Interchange</alert> any two rows.</p>
+                </li>
+                <li>
+                  <p>Type II: <alert>Multiply</alert> a row by a nonzero number.</p>
+                </li>
+                <li>
+                  <p>Type III: <alert>Add</alert> a multiple of one row to another.</p>
+                </li>
+              </ol>
+            </p>
+            <p>
+              <alert>Geometric Point of View—Explore on Own!</alert> Consider the following three systems, inspired by our forest activities. Graph the lines defined by these equations and check how this reflects the number of solutions in each case.</p>
+            <p>
+              <me>\begin{array}{rrrrr}
+x &amp; + &amp; y &amp; = &amp; 18 \\ 
+2x &amp; + &amp; 4y &amp; = &amp; 56 \\
+\end{array}</me>
+            </p>
+            <p>
+              <me>\begin{array}{rrrrr}
+x &amp; + &amp; y &amp; = &amp; 18 \\ 
+4x &amp; + &amp; 4y &amp; = &amp; 72 \\
+\end{array}</me>
+            </p>
+            <p>
+              <me>\begin{array}{rrrrr}
+x &amp; + &amp; y &amp; = &amp; 18 \\ 
+4x &amp; + &amp; 4y &amp; = &amp; 56 \\
+\end{array}</me>
+            </p>
+          </statement>
+        </definition>
+      </section>
+      <section xml:id="section-1-2">
+        <title>Gaussian Elimination</title>
+        <activity xml:id="c1-activity-n11">
+          <statement>
+            <p>The following are augmented matrices representing systems of linear equations in three unknowns (<m>x, y, z</m>). Rewrite the equations, then solve the systems.</p>
+            <p>(a) <m>\left[ \begin {array}{cccc} 1&amp;2&amp;1&amp;4\\ 0&amp;1&amp;2&amp;2
+\\ 0&amp;0&amp;1&amp;-2\end {array} \right]</m>
+            </p>
+            <p>(b) <m>\left[ \begin {array}{cccc} 1&amp;0&amp;0&amp;-5\\ 0&amp;1&amp;0&amp;2
+\\ 0&amp;0&amp;1&amp;4\end {array} \right]</m>
+            </p>
+          </statement>
+          <solution>
+            <p>Rewrite as: <me>\begin{aligned}
+    x + 2y + z &amp;= 4 \\
+    y + 2z &amp;= 2 \\
+    z &amp;= -2
+\end{aligned}</me> Back substitution: <me>\begin{aligned}
+    z &amp;= -2 \\
+    y + 2(-2) &amp;= 2 \implies y = 6 \\
+    x + 2(6) + (-2) &amp;= 4 \implies x = -6
+\end{aligned}</me> Solution: <m>x = -6</m>, <m>y = 6</m>, <m>z = -2</m>.</p>
+            <p>Rewrite as: <me>\begin{aligned}
+    x &amp;= -5 \\
+    y &amp;= 2 \\
+    z &amp;= 4
+\end{aligned}</me> Solution: <m>x = -5</m>, <m>y = 2</m>, <m>z = 4</m>.</p>
+          </solution>
+        </activity>
+        <definition xml:id="c1-definition-n12">
+          <statement>
+            <p>An <m>{m \times n}</m> matrix <m>A</m> is in <alert>row echelon form</alert> (REF) if it satisfies the following properties:</p>
+            <p>
+              <ol marker="(a)">
+                <li>
+                  <p>All <alert>zero rows</alert>, if there are any, appear at the <alert>bottom</alert> of the matrix.</p>
+                </li>
+                <li>
+                  <p>The <alert>first nonzero entry</alert> from the left of a nonzero row is a 1. This entry is called the <alert>leading one</alert> of its row.</p>
+                </li>
+                <li>
+                  <p>For each nonzero row, the leading one appears to the <alert>right and below</alert> any leading ones in <alert>preceding</alert> rows.</p>
+                </li>
+              </ol>
+            </p>
+            <p>We say <m>A</m> is in <alert>reduced row echelon form</alert> (RREF) if <m>A</m> is in REF and also satisfies</p>
+            <p>
+              <ol marker="1.">
+                <li>
+                  <p>If a column contains a leading one, then <alert>all other entries</alert> in that column are zero.</p>
+                </li>
+              </ol>
+            </p>
+            <p>A matrix in REF appears as a staircase (or <alert>echelon</alert>) pattern of leading ones descending from the upper left corner of the matrix. Let’s draw a schematic of a matrix in REF.</p>
+            <figure>
+              <caption>From Linear Algebra with Applications, Vretta-Lyryx</caption>
+              <image source="images/c1-staircase.png" width="70%">
+                <shortdescription>staircase</shortdescription>
+              </image>
+            </figure>
+          </statement>
+        </definition>
+        <activity xml:id="c1-activity-n13">
+          <statement>
+            <p>Which of the following matrices are in REF? Which are in RREF?</p>
+            <p>
+              <m>A = {\left[ \begin{array}{ccccc} 1 &amp; 3 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 3 &amp; 2 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right]}</m>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (1)</em>
+            </p>
+            <p>
+              <m>B = {\left[ \begin{array}{cccc} 1 &amp; 4 &amp; 0 &amp; 2 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; -2 \end{array} \right]}</m>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (2)</em>
+            </p>
+            <p>
+              <m>C = {\left[ \begin{array}{rrrr} 1 &amp; 3 &amp; 5 &amp; 7 \\ 0 &amp; 1 &amp; -1 &amp; 5 \\ 0 &amp; 0 &amp; 1 &amp; 10 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right]}</m>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (3)</em>
+            </p>
+            <p>
+              <m>D = {\left[ \begin{array}{rrrrr} 1 &amp; 0 &amp; 0 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 6 \end{array} \right]}</m>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (4)</em>
+            </p>
+            <p>
+              <m>E = {\left[ \begin{array}{rrrr} 1 &amp; 0 &amp; 4 &amp; 3 \\ 0 &amp; 1 &amp; 2 &amp; 2 \\ 0 &amp; 1 &amp; -5 &amp; 2 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right]}</m>
+            </p>
+            <p>
+              <fillin characters="12" />
+              <em> (5)</em>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>Both REF and RREF (staircase, 0s in columns with leading 1s)</p>
+            <p>
+              <em>Blank 2.</em>
+            </p>
+            <p>Not REF (zero row not at bottom)</p>
+            <p>
+              <em>Blank 3.</em>
+            </p>
+            <p>REF but not RREF (has nonzero entries above leading 1s)</p>
+            <p>
+              <em>Blank 4.</em>
+            </p>
+            <p>Both REF and RREF (has zeros above and below leading 1s)</p>
+            <p>
+              <em>Blank 5.</em>
+            </p>
+            <p>Not REF (third row has leading 1 in same column as second row)</p>
+          </solution>
+        </activity>
+        <definition xml:id="c1-definition-n14">
+          <statement>
+            <p>For a matrix in REF, the first 1 that appears in a row is called a <alert>pivot</alert>. The columns containing pivots are called <alert>pivot columns</alert>.</p>
+          </statement>
+        </definition>
+        <definition xml:id="c1-definition-n15">
+          <statement>
+            <p>An <m>m \times n</m> matrix <m>A</m> is <alert>row equivalent</alert> to an <m>m \times n</m> matrix <m>B</m> if <m>B</m> can be produced by applying a finite sequence of elementary row operations to <m>A</m>.</p>
+          </statement>
+        </definition>
+        <theorem xml:id="c1-theorem-n16">
+          <statement>
+            <p>Every <m>{m \times n}</m> matrix <m>A</m> is <alert>row equivalent</alert> to a <alert>unique</alert> matrix in RREF.</p>
+            <p>
+              <alert>Gaussian Algorithm: How to find a row-echelon matrix from a given matrix</alert>
+            </p>
+            <p>
+              <em>Heuristic</em>: Move from top to bottom and outside in until you get an upper triangular-ish matrix with ones as leading entries.</p>
+            <p>
+              <ul>
+                <li>
+                  <p>If the matrix consists entirely of zeros, stop—it is already in row-echelon form.</p>
+                </li>
+                <li>
+                  <p>Otherwise, find the first column from the left containing a nonzero entry (call it <m>a</m>), and move the row containing that entry to the top position.</p>
+                </li>
+                <li>
+                  <p>Now multiply the new top row by <m>1/a</m> to create a leading 1.</p>
+                </li>
+                <li>
+                  <p>By subtracting multiples of that row from rows below it, make each entry below the leading 1 zero.</p>
+                </li>
+              </ul>
+            </p>
+            <p>This completes the first row, and all further row operations are carried out on the remaining rows.</p>
+            <p>
+              <ul>
+                <li>
+                  <p>Repeat steps 1–4 on the matrix consisting of the remaining rows.</p>
+                </li>
+              </ul>
+            </p>
+            <p>The process stops when either no rows remain at step 5 or the remaining rows consist entirely of zeros.</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c1-activity-n17">
+          <statement>
+            <p>Find a row echelon form of the given matrix <m>A</m>.</p>
+            <p>
+              <me>A = {\left[ \begin{array}{rrrr} 0 &amp; 0 &amp; 1 &amp; 2 \\ 3 &amp; 3 &amp; 6 &amp; -9 \\ 2 &amp; 3 &amp; 0 &amp; -2 \end{array} \right]}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>First nonzero column is column 1. Interchange rows 1 and 2: <m>{\left[ \begin{array}{rrrr} 3 &amp; 3 &amp; 6 &amp; -9 \\ 0 &amp; 0 &amp; 1 &amp; 2 \\ 2 &amp; 3 &amp; 0 &amp; -2 \end{array} \right]}</m>
+            </p>
+            <p>Multiply first row by 1/3: <m>{\left[ \begin{array}{rrrr} 1 &amp; 1 &amp; 2 &amp; -3 \\ 0 &amp; 0 &amp; 1 &amp; 2 \\ 2 &amp; 3 &amp; 0 &amp; -2 \end{array} \right]}</m>
+            </p>
+            <p>Subtract 2 times first row from row 3: <m>{\left[ \begin{array}{rrrr} 1 &amp; 1 &amp; 2 &amp; -3 \\ 0 &amp; 0 &amp; 1 &amp; 2 \\ 0 &amp; 1 &amp; -4 &amp; 4 \end{array} \right]}</m>
+            </p>
+            <p>Interchange rows 2 and 3: <m>{\left[ \begin{array}{rrrr} 1 &amp; 1 &amp; 2 &amp; -3 \\ 0 &amp; 1 &amp; -4 &amp; 4 \\ 0 &amp; 0 &amp; 1 &amp; 2 \end{array} \right]}</m>
+            </p>
+            <p>Matrix is now in REF with leading 1s in columns 1, 2, and 3.</p>
+          </solution>
+        </activity>
+        <theorem xml:id="c1-theorem-n18">
+          <statement>
+            <p>Consider two linear systems each of <m>m</m> equations in <m>n</m> unknowns. If the augmented matrices <m>[A \mathrel{\vert}b]</m> and <m>[C \mathrel{\vert}d]</m> are <alert>row equivalent</alert>, then the linear systems are <alert>equivalent</alert>, i.e. the systems have the same solutions.</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c1-activity-n19">
+          <statement>
+            <p>Solve the linear system <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; 2y &amp; + &amp; 3z &amp; = &amp; 9 \\
+    2x &amp; - &amp; y &amp; + &amp; z &amp; = &amp; 8 \\
+    3x &amp; &amp; &amp; - &amp; z &amp; = &amp; 3
+\end{array}</me> by transforming the associated matrix <m>[A \mathrel{\vert}{\mathbf{b}}]</m> to row echelon form.</p>
+          </statement>
+          <solution>
+            <p>Augmented matrix: <me>\left[ \begin{array}{rrr|r} 
+    1 &amp; 2 &amp; 3 &amp; 9 \\
+    2 &amp; -1 &amp; 1 &amp; 8 \\
+    3 &amp; 0 &amp; -1 &amp; 3
+\end{array} \right]</me>
+            </p>
+            <p>Subtract 2 times row 1 from row 2 and</p>
+            <p>subtract 3 times row 1 from row 3: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 2 &amp; 3 &amp; 9 \\
+    0 &amp; -5 &amp; -5 &amp; -10 \\
+    0 &amp; -6 &amp; -10 &amp; -24
+\end{array} \right]</me>
+            </p>
+            <p>Multiply row 2 by -1/5: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 2 &amp; 3 &amp; 9 \\
+    0 &amp; 1 &amp; 1 &amp; 2 \\
+    0 &amp; -6 &amp; -10 &amp; -24
+\end{array} \right]</me>
+            </p>
+            <p>Add 6 times row 2 to row 3: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 2 &amp; 3 &amp; 9 \\
+    0 &amp; 1 &amp; 1 &amp; 2 \\
+    0 &amp; 0 &amp; -4 &amp; -12
+\end{array} \right]</me>
+            </p>
+            <p>Multiply row 3 by -1/4: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 2 &amp; 3 &amp; 9 \\
+    0 &amp; 1 &amp; 1 &amp; 2 \\
+    0 &amp; 0 &amp; 1 &amp; 3
+\end{array} \right]</me>
+            </p>
+            <p>Back substitute: From row 3: <m>z = 3</m> From row 2: <m>y + z = 2</m> gives <m>y = -1</m> From row 1: <m>x + 2y + 3z = 9</m> gives <m>x = 4</m>
+            </p>
+            <p>Solution is <m>x=2</m>, <m>y=-1</m>, <m>z=3</m>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n20">
+          <statement>
+            <p>Solve the previous linear system by transforming <m>[A \mathrel{\vert}{\mathbf{b}}]</m> to reduced row echelon form.</p>
+          </statement>
+          <solution>
+            <p>Continue from previous REF matrix: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 2 &amp; 3 &amp; 9 \\
+    0 &amp; 1 &amp; 1 &amp; 2 \\
+    0 &amp; 0 &amp; 1 &amp; 3
+\end{array} \right]</me>
+            </p>
+            <p>Subtract 2 times row 2 from row 1: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 0 &amp; 1 &amp; 5 \\
+    0 &amp; 1 &amp; 1 &amp; 2 \\
+    0 &amp; 0 &amp; 1 &amp; 3
+\end{array} \right]</me>
+            </p>
+            <p>Subtract row 3 from row 1, and subtract row 3 from row 2: <me>\left[ \begin{array}{rrr|r}
+    1 &amp; 0 &amp; 0 &amp; 2 \\
+    0 &amp; 1 &amp; 0 &amp; -1 \\
+    0 &amp; 0 &amp; 1 &amp; 3
+\end{array} \right]</me>
+            </p>
+            <p>Matrix now in RREF. Reading off solution: <m>x = 2</m>, <m>y = -1</m>, <m>z = 3</m>
+            </p>
+          </solution>
+        </activity>
+        <p>In this activity, the coefficient matrix of <m>A</m> in RREF is the <alert>identity matrix</alert>. When this happens, the system corresponding to <m>[A \mathrel{\vert}{\mathbf{b}}]</m> has a <alert>unique</alert> solution.</p>
+        <definition xml:id="c1-definition-n21">
+          <statement>
+            <p>If the augmented matrix of a linear system is a REF matrix (or a row echelon matrix), we say the linear system is in <alert>echelon form</alert>. The variables corresponding to columns with leading entries are called <alert>leading variables</alert> (or basic variables), while the other variables are called <alert>free variables</alert>.</p>
+            <p>If the augmented matrix of a linear system is a REF matrix, a variable whose corresponding column does not have a leading <m>1</m> is called a <alert>free</alert> variable.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c1-activity-n22">
+          <statement>
+            <p>Let <me>[C \mathrel{\vert}{\mathbf{d}}] = 
+{\left[ \begin{array}{rrrrr|r} 
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+0 &amp; 1 &amp; 2 &amp; 3 &amp; -1 &amp; 7 \\
+0 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 7 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 2 &amp; 9
+ \end{array} \right]}</me> represent a linear system. Solve the system.</p>
+          </statement>
+          <solution>
+            <p>Matrix already in REF. Let <m>x_1,x_2,x_3,x_4,x_5</m> be the variables.</p>
+            <p>From last row: <m>x_4 + 2x_5 = 9</m>.</p>
+            <p>From third row: <m>x_3 + 2x_4 + 3x_5 = 7</m>.</p>
+            <p>From second row: <m>x_2 + 2x_3 + 3x_4 - x_5 = 7</m>.</p>
+            <p>From first row: <m>x_1 + 2x_2 + 3x_3 + 4x_4 + 5x_5 = 6</m>.</p>
+            <p>Let <m>x_5 = t</m> be parameter.</p>
+            <p>From last row: <m>x_4 = 9-2t</m>.</p>
+            <p>From third row: <m>x_3 = 7 - 2(9-2t) - 3t = -11+4t-3t = -11+t</m>.</p>
+            <p>From second row: <m>x_2 = 7 - 2(-11+t) - 3(9-2t) + t = 7+22-2t-27+6t+t = 2+5t</m>.</p>
+            <p>From first row: <m>x_1 = 6 - 2(2+5t) - 3(-11+t) - 4(9-2t) - 5t = 6-4-10t+33-3t-36+8t-5t = -1-10t</m>.</p>
+            <p>Solution: <m>x_1 = -1-10t</m>, <m>x_2 = 2+5t</m>, <m>x_3 = -11+t</m>, <m>x_4 = 9-2t</m>, <m>x_5 = t</m> where <m>t</m> is any real number</p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n23">
+          <statement>
+            <p>Let <me>[C \mathrel{\vert}{\mathbf{d}}] = 
+{\left[ \begin{array}{rrrr|r} 
+1 &amp; 2 &amp; -3 &amp; 4 &amp; 5 \\
+0 &amp; 1 &amp; 2 &amp; 1 &amp; -6 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+ \end{array} \right]}</me> represent a linear system. Solve the system.</p>
+          </statement>
+          <solution>
+            <p>Last row shows <m>0x_1 + 0x_2 + 0x_3 + 0x_4 = 1</m>
+            </p>
+            <p>This is impossible (0 cannot equal 1)</p>
+            <p>Therefore system is inconsistent—no solutions exist</p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Gaussian Elimination: Solving a Linear System</alert>
+        </p>
+        <p>
+          <ol marker="1.">
+            <li>
+              <p>Convert your linear system to an augmented matrix <m>[A \mathrel{\vert}{\mathbf{b}}]</m>.</p>
+            </li>
+            <li>
+              <p>Use elementary row operations to obtain a matrix <m>[C \mathrel{\vert}{\mathbf{d}}]</m> in (reduced) row echelon form. Note that the two systems are equivalent.</p>
+            </li>
+            <li>
+              <p>If a row <m>\begin{bmatrix} 0 &amp;  0 &amp; 0  &amp; \cdots &amp; 0 &amp; : &amp; 1\end{bmatrix}</m> occurs, the system is inconsistent.</p>
+            </li>
+            <li>
+              <p>Otherwise, assign the free variables as parameters, and use the equations in the row echelon form to solve for the leading variables in terms of the parameters.</p>
+            </li>
+          </ol>
+        </p>
+        <p>Row echelon matrices are not unique for a given starting matrix. For example,</p>
+        <p>
+          <me>{\left[ \begin{array}{rrr} 1 &amp; 3 &amp; 9 \\ 0 &amp; 1 &amp; -6 \\ 0&amp; 0 &amp; 1 \end{array} \right]}
+\qquad \text{and} \qquad
+{\left[ \begin{array}{rrr} 1 &amp; 3 &amp; 9 \\ 0 &amp; 1 &amp; 0 \\ 0&amp; 0 &amp; 1 \end{array} \right]}</me>
+        </p>
+        <p>are row equivalent row echelon matrices, but they are not equal. However, the number of leading 1s will be the same in each row equivalent row echelon matrices.</p>
+        <definition xml:id="c1-definition-n24">
+          <statement>
+            <p>The <alert>rank</alert> of a matrix <m>A</m> is the number of leading 1s (i.e. the number of pivots) in any row echelon form that is row equivalent to <m>A</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c1-activity-n25">
+          <statement>
+            <p>Find the rank of <m>C=\left[ \begin {array}{cccc} 1&amp;1&amp;2&amp;7\\ 0&amp;1&amp;0&amp;3
+\\ 2&amp;1&amp;4&amp;11\end {array} \right]</m>
+            </p>
+          </statement>
+          <solution>
+            <p>Subtract 2 times row 1 from row 3: <me>\left[ \begin{array}{cccc}
+    1 &amp; 1 &amp; 2 &amp; 7 \\
+    0 &amp; 1 &amp; 0 &amp; 3 \\
+    0 &amp; -1 &amp; 0 &amp; -3
+\end{array} \right]</me>
+            </p>
+            <p>Add row 2 to row 3: <me>\left[ \begin{array}{cccc}
+    1 &amp; 1 &amp; 2 &amp; 7 \\
+    0 &amp; 1 &amp; 0 &amp; 3 \\
+    0 &amp; 0 &amp; 0 &amp; 0
+\end{array} \right]</me>
+            </p>
+            <p>Matrix is now in REF with 2 leading 1s. Therefore rank = 2.</p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n26">
+          <statement>
+            <p>Find the rank of <m>D= \left[ \begin {array}{cccc} 1&amp;0&amp;1&amp;2\\ 0&amp;1&amp;0&amp;3
+\\ 2&amp;1&amp;2&amp;-1\end {array} \right]</m>
+            </p>
+          </statement>
+          <solution>
+            <p>Subtract 2 times row 1 from row 3: <me>\left[ \begin{array}{cccc}
+    1 &amp; 0 &amp; 1 &amp; 2 \\
+    0 &amp; 1 &amp; 0 &amp; 3 \\
+    0 &amp; 1 &amp; 0 &amp; -5
+\end{array} \right]</me>
+            </p>
+            <p>Subtract row 2 from row 3: <me>\left[ \begin{array}{cccc}
+    1 &amp; 0 &amp; 1 &amp; 2 \\
+    0 &amp; 1 &amp; 0 &amp; 3 \\
+    0 &amp; 0 &amp; 0 &amp; -8
+\end{array} \right]</me>
+            </p>
+            <p>Multiply row 3 by (-1/8): <me>\left[ \begin{array}{cccc}
+    1 &amp; 0 &amp; 1 &amp; 2 \\
+    0 &amp; 1 &amp; 0 &amp; 3 \\
+    0 &amp; 0 &amp; 0 &amp; 1
+\end{array} \right]</me>
+            </p>
+            <p>Matrix is now in REF with 3 leading ones. Therefore rank = 3.</p>
+          </solution>
+        </activity>
+        <theorem xml:id="c1-theorem-n27">
+          <statement>
+            <p>Suppose a system of <m>m</m> equations in <m>n</m> variables is <alert>consistent</alert> (i.e. it has at least one solution), and the rank of the augmented matrix is <m>r</m>.</p>
+            <p>
+              <ul>
+                <li>
+                  <p>The set of solutions involves exactly <m>n-r</m> parameters.</p>
+                </li>
+                <li>
+                  <p>If <m>r&lt;n</m>, the system has infinitely many solutions.</p>
+                </li>
+                <li>
+                  <p>If <m>r=n</m>, the system has a unique solution.</p>
+                </li>
+              </ul>
+            </p>
+            <p>For any system of linear equations, exactly three possibilities exist:</p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <em>No solution.</em> This occurs when a row <alert>
+                      <m>\begin{bmatrix} 0 &amp;  0 &amp; 0  &amp; \cdots &amp; 0 &amp; : &amp; 1\end{bmatrix}</m>
+                    </alert> occurs in row-echelon form.</p>
+                </li>
+                <li>
+                  <p>
+                    <em>Unique solution.</em> This occurs when every variable is a leading variable, i.e. every variable corresponds to a <alert>pivot</alert>.</p>
+                </li>
+                <li>
+                  <p>
+                    <em>Infinitely many solutions.</em> This occurs when the system is consistent and there is at least one <alert>free</alert> variable.</p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+        </theorem>
+        <activity xml:id="c1-activity-n28">
+          <statement>
+            <p>If <m>C=\left[ \begin {array}{cccc} 1&amp;1&amp;2&amp;7\\ 0&amp;1&amp;0&amp;3
+\\ 2&amp;1&amp;4&amp;11\end {array} \right]</m> represents the augmented matrix for a system of 3 equations and 3 variables, what can we say about the solutions sets of the system?</p>
+          </statement>
+          <solution>
+            <p>Gaussian elimination: <me>\begin{aligned}
+    R_3 \to R_3 - 2R_1 &amp;\implies \left[ \begin{array}{cccc} 1 &amp; 1 &amp; 2 &amp; 7 \\ 0 &amp; 1 &amp; 0 &amp; 3 \\ 0 &amp; -1 &amp; 0 &amp; -3 \end{array} \right] \\
+    R_3 \to R_3 + R_2 &amp;\implies \left[ \begin{array}{cccc} 1 &amp; 1 &amp; 2 &amp; 7 \\ 0 &amp; 1 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right]
+\end{aligned}</me>
+            </p>
+            <p>The system is consistent. There are two pivot columns, meaning one free variable. The system has infinitely many solutions, parameterized by the free variable.</p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n29">
+          <statement>
+            <p>If <m>D= \left[ \begin {array}{cccc} 1&amp;0&amp;1&amp;2\\ 0&amp;1&amp;0&amp;3
+\\ 2&amp;1&amp;2&amp;-1\end {array} \right]</m> represents the augmented matrix for a system of 3 equations and 3 variables, what can we say about the solutions sets of the system?</p>
+          </statement>
+          <solution>
+            <p>Gaussian elimination: <me>\begin{aligned}
+    R_3 \to R_3 - 2R_1 &amp;\implies \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 1 &amp; 2 \\ 0 &amp; 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 &amp; -5 \end{array} \right] \\
+    R_3 \to R_3 - R_2 &amp;\implies \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 1 &amp; 2 \\ 0 &amp; 1 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; -8 \end{array} \right]
+     \\
+    R_3 \to (-1/8) R_3 &amp;\implies \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 1 &amp; 2 \\ 0 &amp; 1 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]
+\end{aligned}</me>
+            </p>
+            <p>By the last row, the system is inconsistent and has no solutions.</p>
+          </solution>
+        </activity>
+      </section>
+      <section xml:id="section-1-3">
+        <title>Homogeneous Equations</title>
+        <activity xml:id="activity-homogeneous-solutions">
+          <statement>
+            <p>Solve the homogeneous system <me>\begin{array}{rrr}
+    2x_1 +  4x_3  +  6x_4  &amp; = &amp; 0 \\
+    x_1  +  2x_2 +    7x_4 &amp; = &amp; 0 
+\end{array}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>Augmented matrix: <me>\left[ \begin{array}{cccc|c}
+    2 &amp; 0 &amp; 4 &amp; 6 &amp; 0 \\
+    1 &amp; 2 &amp; 0 &amp; 7 &amp; 0 
+\end{array} \right]</me>
+            </p>
+            <p>Gaussian elimination: <me>R_1 \to \frac{1}{2}R_1 \implies \left[ \begin{array}{cccc|c}
+    1 &amp; 0 &amp; 2 &amp; 3 &amp; 0 \\
+    1 &amp; 2 &amp; 0 &amp; 7 &amp; 0 
+\end{array} \right]</me>
+              <me>R_2 \to R_2 - R_1 \implies \left[ \begin{array}{cccc|c}
+    1 &amp; 0 &amp; 2 &amp; 3 &amp; 0 \\
+    0 &amp; 2 &amp; -2 &amp; 4 &amp; 0 
+\end{array} \right]</me>
+              <me>R_2 \to \frac{1}{2}R_2 \implies \left[ \begin{array}{cccc|c}
+    1 &amp; 0 &amp; 2 &amp; 3 &amp; 0 \\
+    0 &amp; 1 &amp; -1 &amp; 2 &amp; 0 
+\end{array} \right]</me>
+            </p>
+            <p>Parametric form of the solutions: <me>x_1 = -2x_3 - 3x_4, \quad x_2 = x_3 - 2x_4, \quad x_3 = x_3, \quad x_4 = x_4</me>
+              <me>\text{Let } x_3 = s, \, x_4 = t \text{ (free variables).}</me>
+              <me>\begin{aligned}
+    x_1 &amp;= -2s - 3t, \\
+    x_2 &amp;= s - 2t, \\
+    x_3 &amp;= s, \\
+    x_4 &amp;= t.
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <theorem xml:id="c1-theorem-n31">
+          <statement>
+            <p>A homogeneous system of <m>m</m> linear equations in <m>n</m> unknowns <alert>always</alert> has a non-trivial solution if <alert>
+                <m>n &gt; m</m>
+              </alert>, that is if the number of unknowns exceeds the number of equations.</p>
+            <p>
+              <alert>Question:</alert> Does a homogeneous system NEED to have more variables than equations in order to have infinitely many solutions?</p>
+            <p>We can also <q>generate</q> solutions for homogeneous systems using a finite set of starting solutions.</p>
+            <p>We reviewed the following definition earlier in the course.</p>
+          </statement>
+        </theorem>
+        <definition xml:id="c1-definition-n32">
+          <statement>
+            <p>Let <m>\mathbf{x},\mathbf{y}</m> be column matrices (or vectors or column vectors) with same number of entries (i.e. have <m>m</m> rows, 1 column), and <m>k</m> a scalar/real number. We define the <alert>sum</alert>
+              <m>\mathbf{x}+\mathbf{y}</m> by adding their respective entries and the <alert>scalar product</alert>
+              <m>k\mathbf{x}</m> by multiplying each entry of <m>\mathbf{x}</m> by <m>k</m>. In other words, <me>\text{If}\; \mathbf{x}=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\x_n\end{bmatrix}, \mathbf{y}=\begin{bmatrix} y_1 \\ y_2 \\ \vdots \\y_n\end{bmatrix}, \text{then} \;  \mathbf{x}+ \mathbf{y}=\begin{bmatrix} x_1+y_1 \\ x_2+y_2 \\ \vdots \\x_n+y_n\end{bmatrix} \text{and} \; k\mathbf{x}=\begin{bmatrix} kx_1 \\ kx_2 \\ \vdots \\kx_n\end{bmatrix}.</me> A sum of scalar multiples of several column matrices is called a <alert>linear combination</alert> of the column matrices. For example, if <m>\mathbf{x}, \mathbf{y}, \mathbf{z}</m> are column matrices, then for any choice of scalars <m>r,s,t</m>, <me>r\mathbf{x}+s\mathbf{y}+t\mathbf{z}</me> is a linear combination of <m>\mathbf{x}, \mathbf{y}</m> and <m>\mathbf{z}</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c1-activity-n33">
+          <statement>
+            <p>The following are linear combinations:</p>
+            <p>
+              <m>2 \begin{bmatrix}
+3\\ 1
+\end{bmatrix}
++ (-5) \begin{bmatrix}
+1 \\ 2 
+\end{bmatrix}
+=</m>
+              <fillin characters="12" />
+              <em> (1)</em>
+            </p>
+            <p>
+              <m>1/2\begin{bmatrix}
+4\\ 1 \\ 6
+\end{bmatrix}
++ 2\begin{bmatrix}
+-3 \\ 0 \\1
+\end{bmatrix}
+=</m>
+              <fillin characters="12" />
+              <em> (2)</em>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>
+              <m>\begin{bmatrix}
+    2(3) + (-5)(1) \\
+    2(1) + (-5)(2)
+\end{bmatrix}
+=
+\begin{bmatrix}
+    6 - 5 \\
+    2 - 10
+\end{bmatrix}
+=
+\begin{bmatrix}
+    1 \\
+    -8
+    \end{bmatrix}</m>
+            </p>
+            <p>
+              <em>Blank 2.</em>
+            </p>
+            <p>
+              <m>\begin{bmatrix}
+    \frac{1}{2}(4) + 2(-3) \\
+    \frac{1}{2}(1) + 2(0) \\
+    \frac{1}{2}(6) + 2(1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+    2 - 6 \\
+    \frac{1}{2} + 0 \\
+    3 + 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+    -4 \\
+    \frac{1}{2} \\
+    5
+\end{bmatrix}</m>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c1-activity-n34">
+          <statement>
+            <p>Go back to Activity <xref ref="activity-homogeneous-solutions" text="global" /> and rewrite the solutions in the form of a linear combination.</p>
+          </statement>
+          <solution>
+            <p>Solution set: <me>\begin{bmatrix}
+    x_1 \\ x_2 \\ x_3 \\ x_4
+\end{bmatrix}
+= s \begin{bmatrix}
+    -2 \\ 1 \\ 1 \\ 0
+\end{bmatrix}
++ t \begin{bmatrix}
+    -3 \\ -2 \\ 0 \\ 1
+\end{bmatrix}</me>
+            </p>
+          </solution>
+        </activity>
+        <axiom xml:id="c1-fact-n35">
+          <statement>
+            <p>Any linear combination of solutions to a homogeneous system is again a solution to the homogeneous system.</p>
+          </statement>
+        </axiom>
+        <activity xml:id="c1-activity-n36">
+          <statement>
+            <p>Consider the homogeneous system whose augmented matrix, when put in RREF, is <me>A = {\left[ \begin{array}{rrrrr|r} 
+1 &amp; 0 &amp; 0 &amp; 0 &amp; -2 &amp; 0 \\ 
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 5 &amp; 0 \\ 
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 
+ \end{array} \right]}.</me> Solve the above system and write the solutions as a linear combination of particular solutions.</p>
+          </statement>
+          <solution>
+            <p>Interpret the RREF matrix: <me>x_1 - 2x_5 = 0, \quad x_3 = 0, \quad x_4 + 5x_5 = 0</me>
+            </p>
+            <p>Solve for pivot variables: <me>x_1 = 2x_5, \quad x_3 = 0, \quad x_4 = -5x_5</me>
+            </p>
+            <p>Express free variable as parameters: Let <m>x_2 = s</m> and <m>x_5 = t</m>. <me>\begin{aligned}
+    x_1 &amp;= 2t, \quad x_2 = s, \quad x_3 = 0, \quad x_4 = -5t, \quad x_5 = t
+\end{aligned}</me>
+            </p>
+            <p>Solutions in vector form: <me>\begin{aligned}
+        \begin{bmatrix}
+            x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
+        \end{bmatrix}
+        &amp;= s \begin{bmatrix}
+            0 \\ 1 \\ 0 \\ 0 \\ 0
+        \end{bmatrix}
+        + t \begin{bmatrix}
+            2 \\ 0 \\ 0 \\ -5 \\ 1
+        \end{bmatrix}
+    \end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c1-definition-n37">
+          <statement>
+            <p>The Gaussian algorithm systematically produces solutions to any homogeneous linear system, called <alert>basic solutions</alert>, one for every parameter. Every solution can be written as a linear combination of the basic solutions.</p>
+          </statement>
+        </definition>
+        <theorem xml:id="c1-theorem-n38">
+          <statement>
+            <p>Let <m>A</m> be a matrix with <m>m</m> rows and <m>n</m> columns, with <m>\mathop{\mathrm{rank}}(A)=r.</m> Consider the homogeneous system in <m>n</m> variables with <m>A</m> as the coefficient matrix. Then:</p>
+            <p>
+              <ul>
+                <li>
+                  <p>The system has exactly <m>n-r</m> basic solutions, one for each parameter. (note: <m>n-r</m> is the number of <alert>free</alert> variables)</p>
+                </li>
+                <li>
+                  <p>Every solution is a linear combination of these basic solutions.</p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+        </theorem>
+      </section>
+    </chapter>
+    <chapter xml:id="chapter-2">
+      <title>Matrix Algebra</title>
+      <introduction>
+        <p> These notes use material from your textbook <em>Linear Algebra with Applications</em> by W. Keith Nicholson [LAWA]. Sections are numbered in their order of presentation within each chapter.</p>
+        <p>Learning goals:</p>
+        <p>
+          <ul>
+            <li>
+              <p>Be able to pick out an element of a matrix given its indices</p>
+            </li>
+            <li>
+              <p>Know what it means for two matrices to be equal vs. row equivalent</p>
+            </li>
+            <li>
+              <p>Know how to perform matrix operations: sum/difference, scalar multiplication, transpose, matrix-vector product (both as a linear combination and using dot product)</p>
+            </li>
+            <li>
+              <p>Know the basic properties of matrix operations</p>
+            </li>
+            <li>
+              <p>Know how to perform matrix multiplication (both as repeated matrix-vector multiplication and using dot product)</p>
+            </li>
+            <li>
+              <p>Know which sizes of matrices can be multiplied together, and what the resulting product matrix’s size will be</p>
+            </li>
+            <li>
+              <p>Know the properties of matrix multiplication and how they interact with previous operations</p>
+            </li>
+            <li>
+              <p>Be familiar with properties of inverses of matrices: uniqueness, inverse of a product, inverse of inverse, inverse of transpose</p>
+            </li>
+            <li>
+              <p>Know how to use matrix inverses to solve linear systems of equations</p>
+            </li>
+            <li>
+              <p>Be able to compute inverse matrices directly using row reduction</p>
+            </li>
+            <li>
+              <p>Know the equivalent properties to determine if a matrix is invertible</p>
+            </li>
+            <li>
+              <p>Know how to find the inverse of a matrix transformation</p>
+            </li>
+            <li>
+              <p>Be able to compute the image of a vector under a matrix transformation</p>
+            </li>
+            <li>
+              <p>Be able to determine if a vector is the image of vector under a matrix transformation</p>
+            </li>
+            <li>
+              <p>Find the matrix representation of a linear transformation <m>T:\mathbb{R}^n\to \mathbb{R}^m</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </introduction>
+      <section xml:id="section-2-1">
+        <title>Matrix Addition, Scalar Multiplication, and Transposition</title>
+        <p>We’ve seen matrices used to help us solve systems of linear equations. We’re now going to define them more formally and explore other ways to utilize them.</p>
+        <definition xml:id="c2-definition-n1">
+          <statement>
+            <p>An <m>m \times n</m>
+              <alert>matrix</alert>
+              <m>A</m> is a rectangular array of <m>m \cdot n</m> real numbers arranged in <m>m</m>
+              <alert>horizontal rows</alert> and <m>n</m>
+              <alert>vertical columns</alert>: <me>A = \begin{bmatrix}
+{a_{11}} &amp; {a_{12}} &amp; \cdots &amp; \cdots &amp; \cdots &amp; {a_{1n}} \\ 
+{a_{21}} &amp; {a_{22}} &amp; \cdots &amp; \cdots &amp; \cdots &amp; {a_{2n}} \\ 
+\vdots &amp; \vdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \vdots \\ 
+\vdots &amp; \vdots &amp; \cdots &amp; \cdots &amp; a_{ij} &amp; \vdots \\ 
+\vdots &amp; \vdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \vdots \\ 
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; \cdots &amp; \cdots &amp; a_{mn} \\ 
+\end{bmatrix}</me> The <alert>
+                <m>i</m>th row</alert> of <m>A</m> is <m>\begin{bmatrix}
+a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in}
+\end{bmatrix},</m> and the <alert>
+                <m>j</m>-th column</alert> of <m>A</m> is <me>\begin{bmatrix}
+{a_{1j}} \\ {a_{2j}} \\ \vdots \\ a_{mj}.
+\end{bmatrix}.</me> The number <m>{a_{ij}}</m>, which is in the <m>i</m>th row and <m>j</m>th column of <m>A</m>, is the <alert>
+                <m>(i,j)</m>-entry</alert> of <m>A</m>, and we often write <m>A = [{a_{ij}}].</m> We say <m>A</m> is an <q>
+                <alert>
+                  <m>m</m> by <m>n</m>
+                </alert>
+              </q> matrix.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n2">
+          <statement>
+            <p>Consider the matrix <me>A = \begin{bmatrix}
+1 &amp; 2 &amp; 3 \\ 
+5 &amp; -8 &amp; -13
+\end{bmatrix}</me>
+              <m>A</m> is a <fillin characters="12" />
+              <em> (1)</em>
+              <m>\times</m>
+              <fillin characters="12" />
+              <em> (2)</em> matrix. Complete the following:</p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>{a_{11}} = <fillin characters="12" />_{\text{(3)}}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>{a_{12}} = <fillin characters="12" />_{\text{(4)}}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>{a_{21}} = <fillin characters="12" />_{\text{(5)}}</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>{a_{23}} = <fillin characters="12" />_{\text{(6)}}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>{a_{32}} = <fillin characters="12" />_{\text{(7)}}</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>2</p>
+            <p>
+              <em>Blank 2.</em>
+            </p>
+            <p>3</p>
+            <p>
+              <em>Blank 3.</em>
+            </p>
+            <p>
+              <m>1</m>
+            </p>
+            <p>
+              <em>Blank 4.</em>
+            </p>
+            <p>
+              <m>2</m>
+            </p>
+            <p>
+              <em>Blank 5.</em>
+            </p>
+            <p>
+              <m>5</m>
+            </p>
+            <p>
+              <em>Blank 6.</em>
+            </p>
+            <p>
+              <m>-13</m>
+            </p>
+            <p>
+              <em>Blank 7.</em>
+            </p>
+            <p>
+              <m>\text{no such entry}</m>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n3">
+          <statement>
+            <p>Two matrices <m>A</m> and <m>B</m> are <alert>equal</alert> if they have the same size AND all the corresponding entries are equal.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n4">
+          <statement>
+            <p>If <m>A=\begin{bmatrix} 3 &amp; y\\ 4 &amp; -7\end{bmatrix}</m> and <m>B=\begin{bmatrix} 6+x &amp; -2 \\4 &amp; -7 \end{bmatrix}</m>, and <m>A=B</m>, find <m>x</m> and <m>y</m>.</p>
+          </statement>
+          <solution>
+            <p>Since <m>A = B</m>, comparing corresponding entries: <me>3 = 6 + x \implies x = -3</me>
+              <me>y = -2</me> Therefore <m>x = -3</m> and <m>y = -2</m>.</p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Matrix Operations</alert>
+        </p>
+        <p>
+          <em>Matrix Addition</em>: If <m>A = [{a_{ij}}]</m> and <m>B = [{b_{ij}}]</m> are both <m>m \times n</m> matrices, then their <alert>sum</alert>
+          <m>A+B</m> is the matrix <m>C = [{c_{ij}}]</m> where <m>{c_{ij}}=</m>
+          <alert>
+            <m>{a_{ij}}+ {b_{ij}}</m>
+          </alert>.</p>
+        <activity xml:id="c2-activity-n5">
+          <statement>
+            <p>For the matrices <m>A</m> and <m>B</m> as below, calculate <m>A+B</m>. <me>A = \begin{bmatrix}
+1 &amp; 2 &amp; 3 \\ 
+5 &amp; -8 &amp; -13
+\end{bmatrix}
+\quad
+\text{and}
+\quad 
+B = \begin{bmatrix}
+0 &amp; 2 &amp; 1 \\ 
+1 &amp; 3 &amp; -4 
+\end{bmatrix}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <me>A+B = \begin{bmatrix} 1 &amp; 4 &amp; 4\\ 6 &amp; -5 &amp; -17\end{bmatrix}</me>
+            </p>
+          </solution>
+        </activity>
+        <note xml:id="c2-note-n6">
+          <p>For <m>A+B</m> to be defined, <m>A</m> and <m>B</m> must be the same size. From now on, if we write <m>A+B</m>, assume that this is the case.</p>
+          <p>
+            <em>Scalar Multiplication</em>: If <m>A = [{a_{ij}}]</m> is an <m>{m \times n}</m> matrix and <m>r</m> is a real number, then the <alert>scalar multiple</alert> of <m>A</m> by <m>r</m>, written <alert>
+              <m>rA</m>
+            </alert>, is the <m>{m \times n}</m> matrix <m>C = [{c_{ij}}]</m>, where <m>{c_{ij}}=</m>
+            <alert>
+              <m>r{a_{ij}}</m>
+            </alert>, that is, <m>C</m> is the matrix obtained by multiplying every entry of <m>A</m> by <m>r</m>.</p>
+        </note>
+        <activity xml:id="c2-activity-n7">
+          <statement>
+            <p>For <m>A</m> as in the activity above, calculate <m>-2A</m>.</p>
+          </statement>
+          <solution>
+            <p>
+              <me>-2A = \begin{bmatrix} -2 &amp; -4 &amp; -6 \\ -10 &amp; 16 &amp; 26 \end{bmatrix}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n8">
+          <statement>
+            <p>If <m>A_1, A_2, \ldots, A_k</m> are <m>{m \times n}</m> matrices and <m>c_1, c_2, \ldots, c_k</m> are real numbers, then an expression of the form <me>c_1 A_1 + c_2 A_2 + \cdots + c_k A_k</me> is called a <alert>linear combination</alert> of <m>A_1, A_2, \ldots, A_k</m>. The scalars <m>c_1, \ldots, c_k</m> are called <alert>coefficients</alert>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n9">
+          <statement>
+            <p>The following is a linear combination of matrices. Compute it.</p>
+            <p>
+              <m>4 \begin{bmatrix} 
+0 &amp; 2  \\ 
+-3 &amp; 3  
+\end{bmatrix}
+- \frac{1}{2} \begin{bmatrix}
+4 &amp; 2  \\
+6 &amp; 2  
+\end{bmatrix}</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <me>\begin{aligned}
+        &amp;= \begin{bmatrix} 0 &amp; 8 \\ -12 &amp; 12 \end{bmatrix} - \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 1 \end{bmatrix} \\
+        &amp;= \begin{bmatrix} -2 &amp; 7 \\ -15 &amp; 11 \end{bmatrix}
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Matrix Addition Properties</alert>
+        </p>
+        <p>Let <m>A</m>, <m>B</m>, and <m>C</m> be <m>{m \times n}</m> matrices.</p>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>A+B =</m>
+                <alert>
+                  <m>A + B</m>
+                </alert>, i.e. matrix addition is <alert>commutative</alert>.</p>
+            </li>
+            <li>
+              <p>
+                <m>A + (B + C) =</m>
+                <alert>
+                  <m>(A + B) + C</m>
+                </alert>, i.e. matrix addition is <alert>associative</alert>.</p>
+            </li>
+            <li>
+              <p>There is a unique <m>{m \times n}</m> matrix <m>O</m> such that <m>A+O =</m>
+                <alert>
+                  <m>A</m>
+                </alert> for any <m>{m \times n}</m> matrix <m>A</m>. The matrix <m>O</m> is called the <m>{m \times n}</m>
+                <alert>zero matrix</alert>.</p>
+            </li>
+            <li>
+              <p>For each <m>{m \times n}</m> matrix <m>A</m>, there is a unique <m>{m \times n}</m> matrix <m>D</m> such that <m>A+D=</m>
+                <alert>
+                  <m>O</m>
+                </alert>. The matrix <m>D</m> must, in fact, be the matrix <alert>
+                  <m>- A = (-1)A</m>
+                </alert>. The matrix <m>-A</m> is called the <alert>negative</alert> of <m>A</m>.</p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          <em>Proof of (a) (if time)</em>:</p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>Let <m>A = [a_{ij}]</m> and <m>B = [b_{ij}]</m>. Then: <me>\begin{aligned}
+        A + B &amp;= [a_{ij} + b_{ij}] \\
+        &amp;= [b_{ij} + a_{ij}] \quad \text{(since real numbers are commutative)} \\
+        &amp;= B + A
+    
+\end{aligned}</me>
+        </p>
+        <p>
+          <alert>Scalar Multiplication Properties</alert>
+        </p>
+        <p>If <m>r</m> and <m>s</m> are real numbers and <m>A</m> and <m>B</m> are matrices of the appropriate sizes, then</p>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>r(sA)=</m>
+                <alert>
+                  <m>(rs) A</m>
+                </alert>.</p>
+            </li>
+            <li>
+              <p>
+                <m>(r+s)A=</m>
+                <alert>
+                  <m>rA + sA</m>
+                </alert>.</p>
+            </li>
+            <li>
+              <p>
+                <m>r(A+B)=</m>
+                <alert>
+                  <m>rA + rB</m>
+                </alert>.</p>
+            </li>
+          </ol>
+        </p>
+        <definition xml:id="c2-definition-n10">
+          <statement>
+            <p>If <m>A = [{a_{ij}}]</m> is an <m>{m \times n}</m> matrix, then the <alert>transpose</alert> of <m>A</m>, denoted <m>A^T = [{a_{ij}}^T]</m>, is the <alert>
+                <m>n</m>
+              </alert>
+              <m>\times</m>
+              <alert>
+                <m>m</m>
+              </alert> matrix defined by <me>{a_{ij}}^T = a_{ji}</me> In other words, the transpose of <m>A</m> is obtained by <alert>interchanging</alert> the rows and the columns of <m>A</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n11">
+          <statement>
+            <p>Compute the transpose for each of the given matrices: <me>A = 
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\ 
+5 &amp; -8 &amp; -13
+\end{bmatrix}, 
+\ \ 
+B = 
+\begin{bmatrix}
+5 &amp; 2 &amp; 3 \\
+6 &amp; 2 &amp; 3 \\ 
+-1 &amp; -2 &amp; 3
+\end{bmatrix}, 
+\text{ and } 
+C = 
+\begin{bmatrix}
+10 \\ 20 \\ 30 
+\end{bmatrix}.</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <m>A^T = \begin{bmatrix} 1 &amp; 5 \\ 2 &amp; -8 \\ 3 &amp; -13 \end{bmatrix}</m>
+            </p>
+            <p>
+              <m>B^T = \begin{bmatrix} 5 &amp; 6 &amp; -1 \\ 2 &amp; 2 &amp; -2 \\ 3 &amp; 3 &amp; 3 \end{bmatrix}</m>
+            </p>
+            <p>
+              <m>C^T = \begin{bmatrix} 10 &amp; 20 &amp; 30 \end{bmatrix}</m>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n12">
+          <statement>
+            <p>If <m>A=[a_{ij}]</m> is an <m>m\times n</m> matrix, the elements <m>a_{11}, a_{22}, a_{33},\ldots</m> are called the main diagonal of <m>A</m>.</p>
+            <figure>
+              <caption>From Linear Algebra with Applications, Vretta-Lyryx</caption>
+              <image source="images/c2-diagonal.png" width="70%">
+                <shortdescription>diagonal</shortdescription>
+              </image>
+            </figure>
+            <p>Thus forming the transpose of a matrix <m>A</m> can be viewed as <alert>flipping</alert>
+              <m>A</m> about its main diagonal.</p>
+          </statement>
+        </definition>
+        <p>
+          <alert>Matrix Transpose Properties</alert>
+        </p>
+        <p>If <m>r</m> is a scalar and <m>A</m> and <m>B</m> are matrices of the appropriate sizes, then</p>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>(A^T)^T =</m>
+                <alert>
+                  <m>A</m>
+                </alert>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(A + B)^T=</m>
+                <alert>
+                  <m>A^T + B^T</m>
+                </alert>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(rA)^T=</m>
+                <alert>
+                  <m>rA^T</m>
+                </alert>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          <em>Proof of (b) (time permitting):</em>
+        </p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>Let <m>A = [a_{ij}]</m> and <m>B = [b_{ij}]</m>. Then <m>A + B = [c_{ij}]</m> where <m>c_{ij} = a_{ij} + b_{ij}</m>.</p>
+        <p>By definition of transpose: <m>(A + B)^T = [c_{ij}]^T = [c_{ji}]</m>
+        </p>
+        <p>Since <m>c_{ij} = a_{ij} + b_{ij}</m>, we have: <m>[c_{ji}] = [a_{ji} + b_{ji}] = [a_{ji}] + [b_{ji}] = A^T + B^T</m>
+        </p>
+        <p>Therefore, <m>(A + B)^T = A^T + B^T</m>.</p>
+        <definition xml:id="c2-definition-n13">
+          <statement>
+            <p>A matrix <m>A</m> with real entries is called <alert>symmetric</alert> if <alert>
+                <m>A^T = A</m>
+              </alert>. A matrix <m>A</m> is called <alert>skew symmetric</alert> if <alert>
+                <m>A^T = -A</m>
+              </alert>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n14">
+          <statement>
+            <p>Are the following matrices symmetric/skew symmetric/neither?</p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>A = {\left[ \begin{array}{rrr} 0 &amp; 2 &amp; -3 \\ -2 &amp; 0 &amp; 5 \\ 3 &amp; -5 &amp; 0 \end{array} \right]}, \quad B = {\left[ \begin{array}{rrr} 3 &amp; 5 &amp; 2 \\ 5 &amp; 1 &amp; 4 \\ 2 &amp; 4 &amp; -1 \end{array} \right]},</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C = {\left[ \begin{array}{rrr} 1 &amp; 2 &amp; -3 \\ -2 &amp; 0 &amp; 5 \\ 3 &amp; 5 &amp; 0 \end{array} \right]}, \quad D = {\left[ \begin{array}{rrr} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array} \right]}.</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>Let’s examine each matrix:</p>
+            <p>
+              <ol marker="(a)">
+                <li>
+                  <p>
+                    <m>A = \begin{bmatrix} 0 &amp; 2 &amp; -3 \\ -2 &amp; 0 &amp; 5 \\ 3 &amp; -5 &amp; 0 \end{bmatrix}</m> skew symmetric since <m>A^T = -A</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>B = \begin{bmatrix} 3 &amp; 5 &amp; 2 \\ 5 &amp; 1 &amp; 4 \\ 2 &amp; 4 &amp; -1 \end{bmatrix}</m> symmetric since <m>B^T = B</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C = \begin{bmatrix} 1 &amp; 2 &amp; -3 \\ -2 &amp; 0 &amp; 5 \\ 3 &amp; 5 &amp; 0 \end{bmatrix}</m> neither symmetric nor skew symmetric</p>
+                </li>
+                <li>
+                  <p>
+                    <m>D = \begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}</m> both symmetric and skew symmetric</p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+        </activity>
+        <note xml:id="c2-note-n15">
+          <p>If a matrix <m>A</m> is symmetric AND skew symmetric at the same time, then <m>A</m> must be a <alert>zero</alert> matrix! (Why?)</p>
+        </note>
+      </section>
+      <section xml:id="section-2-2">
+        <title>Matrix-Vector Multiplication</title>
+        <p>
+          <alert>Vectors as matrices</alert>
+        </p>
+        <definition xml:id="c2-definition-n16">
+          <statement>
+            <p>A matrix is a <alert>row vector</alert> if it is <m>1 \times n</m> and is a <alert>column vector</alert> if it is <m>n \times 1</m>. Often we will call them just <alert>
+                <m>n</m>-vectors</alert> or <q>vectors of length <m>n</m>
+              </q> denoted with bold-face font. For example, <m>\mathbf{x}</m> or <m>\mathbf{v}</m>. <m>\mathbb{R}^n</m> denotes the set of all <m>n</m>-vectors.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n17">
+          <statement>
+            <p>
+              <m>\mathbf{v}=\begin{bmatrix}  -3 \\ \sqrt{2} \\ 0\end{bmatrix}</m> is a <fillin characters="12" />
+              <em> (1)</em>, or a vector in <fillin characters="12" />
+              <em> (2)</em>.</p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>3-vector</p>
+            <p>
+              <em>Blank 2.</em>
+            </p>
+            <p>
+              <m>\mathbb{R}^3</m>
+            </p>
+          </solution>
+        </activity>
+        <p>The <alert>zero vector</alert> in <m>\mathbb{R}^n</m>, denoted <m>\mathbf{0}</m> or <alert>
+            <m>\vec{0}</m>
+          </alert>, is the <m>n</m>-vector consisting of all zeros.</p>
+        <p>An <m>m\times n</m> matrix can be thought of a row of <m>n</m> column vectors of length <m>m</m>:</p>
+        <p>
+          <m>A=\begin{bmatrix}\mathbf{a}_1 &amp; \mathbf{a}_2 &amp;\cdots &amp; \mathbf{a}_n\end{bmatrix}</m>, where <m>\mathbf{a}_i</m> is the <alert>
+            <m>i</m>-th column</alert> of <m>A</m>.</p>
+        <p>
+          <alert>Matrix-Vector Product</alert>
+        </p>
+        <p>We start with an activity.</p>
+        <activity xml:id="c2-activity-n18">
+          <statement>
+            <p>Consider the linear system <me>\begin{array}{rrrrrrr}
+    x &amp; + &amp; 2y &amp; + &amp; 3z &amp; = &amp; 6  \\
+    2x &amp; - &amp; 3y &amp; + &amp; 2z &amp; = &amp; 14 \\ 
+    3x &amp; + &amp; y &amp; - &amp; z &amp; = &amp;-2.
+\end{array}</me> Rewrite this system using a linear combination.</p>
+          </statement>
+          <solution>
+            <p>
+              <me>x \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} + y \begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix} + z \begin{bmatrix} 3 \\ 2 \\ -1 \end{bmatrix} = \begin{bmatrix} 6 \\ 14 \\ -2 \end{bmatrix}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n19">
+          <statement>
+            <p>Let <m>A=\begin{bmatrix}\mathbf{a}_1 &amp; \mathbf{a}_2 &amp;\cdots &amp; \mathbf{a}_n\end{bmatrix}</m> be an <m>m\times n</m> matrix, written in terms of its columns <m>\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_n.</m> If <m>\mathbf{x}=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n\end{bmatrix}</m> is any <m>n</m>-vector, the <alert>matrix-vector product</alert>
+              <m>A\mathbf{x}</m> is defined to be the <m>m</m>-vector given by:</p>
+            <p>
+              <me>A\mathbf{x}=x_1\mathbf{a}_1+x_2\mathbf{a}_2+\cdots x_n\mathbf{a}_n.</me>
+            </p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n20">
+          <statement>
+            <p>Compute the matrix-vector product <m>A{\mathbf{x}}</m> where <me>A = {\left[ \begin{array}{rrr} 
+-1 &amp; 4 &amp; -5 \\ 
+3 &amp; 1 &amp; -2
+ \end{array} \right]}
+\text{ and } 
+{\mathbf{x}}= {\left[ \begin{array}{r} 2 \\ -3 \\ 4 \end{array} \right]}.</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <me>A = \begin{bmatrix}\mathbf{a}_1 &amp; \mathbf{a}_2 &amp; \mathbf{a}_3\end{bmatrix} 
+    \text{ where }
+    \mathbf{a}_1 = {\left[ \begin{array}{r} -1 \\ 3 \end{array} \right]}, 
+    \mathbf{a}_2 = {\left[ \begin{array}{r} 4 \\ 1 \end{array} \right]}, 
+    \mathbf{a}_3 = {\left[ \begin{array}{r} -5 \\ -2 \end{array} \right]}</me>
+              <me>\begin{aligned}
+        A{\mathbf{x}}&amp;= 2\mathbf{a}_1 + (-3)\mathbf{a}_2 + 4\mathbf{a}_3 \\[1ex]
+        &amp;= 2{\left[ \begin{array}{r} -1 \\ 3 \end{array} \right]} + (-3){\left[ \begin{array}{r} 4 \\ 1 \end{array} \right]} + 4{\left[ \begin{array}{r} -5 \\ -2 \end{array} \right]} \\[1ex]
+        &amp;= {\left[ \begin{array}{r} -2 \\ 6 \end{array} \right]} + {\left[ \begin{array}{r} -12 \\ -3 \end{array} \right]} + {\left[ \begin{array}{r} -20 \\ -8 \end{array} \right]} 
+        = {\left[ \begin{array}{r} -34 \\ -5 \end{array} \right]}
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <p>Notice that we can now write a linear system of equations in terms of a single matrix equation: Consider the linear system of <m>m</m> equations in <m>n</m> unknowns, <me>\begin{array}{llllll}
+    a_{11}x_1 + &amp; a_{12}x_2 + &amp; \cdots + &amp; a_{1n}x_n &amp; = &amp; b_1 \\
+    a_{21}x_1 + &amp; a_{21}x_2 + &amp; \cdots + &amp; a_{2n}x_n &amp; = &amp; b_2 \\ 
+    \vdots &amp; \vdots &amp; &amp; \vdots &amp; &amp; \vdots \\ 
+    a_{m1}x_1 + &amp; a_{m2}x_2 + &amp; \cdots + &amp; a_{mn}x_n &amp; = &amp; b_m.
+\end{array}</me> From this system, define the matrices <me>A = {\left[ \begin{array}{cccc} 
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ 
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ 
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{array} \right]},
+\quad
+{\mathbf{x}}= {\left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array} \right]},
+\text{ and } 
+{\mathbf{b}}= {\left[ \begin{array}{c} b_1 \\ b_2 \\ \vdots \\ b_m \end{array} \right]}.</me>
+        </p>
+        <p>We can rewrite this system as a matrix equation: <alert>
+            <m>A\mathbf{x}=\mathbf{b}</m>
+          </alert>
+        </p>
+        <theorem xml:id="c2-theorem-n21">
+          <statement>
+            <p>
+              <ol marker="1.">
+                <li>
+                  <p>Every system of linear equations has the form <m>A\mathbf{x}=\mathbf{b}</m> where <m>A</m> is the coefficient matrix, <m>\mathbf{b}</m> is the constant matrix/vector, and <m>\mathbf{x}</m> is the matrix/vector of variables.</p>
+                </li>
+                <li>
+                  <p>The system <m>A\mathbf{x} =\mathbf{b}</m> is consistent if and only if <m>\mathbf{b}</m> is a linear combination of the columns of <m>A</m>.</p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </theorem>
+        <activity xml:id="c2-activity-n22">
+          <statement>
+            <p>Is <m>\mathbf{b}=\begin{bmatrix} 1 \\ 2 \\ 4\end{bmatrix}</m> a linear combination of <m>\mathbf{a}_1=\begin{bmatrix} 1 \\3 \\-2\end{bmatrix}, \mathbf{a}_2=\begin{bmatrix} -2 \\1 \\1\end{bmatrix}</m>, <m>\mathbf{a}_3=\begin{bmatrix} -3 \\5 \\0\end{bmatrix}</m>?</p>
+          </statement>
+          <solution>
+            <p>We need to solve the system: <me>x_1 \begin{bmatrix} 1 \\ 3 \\ -2 \end{bmatrix} + x_2 \begin{bmatrix} -2 \\ 1 \\ 1 \end{bmatrix} + x_3 \begin{bmatrix} -3 \\ 5 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 4 \end{bmatrix}</me> which corresponds to the augmented matrix:</p>
+            <p>
+              <me>\left[
+    \begin{array}{rrr|r}
+        1 &amp; -2 &amp; -3 &amp; 1 \\
+        3 &amp; 1 &amp; 5 &amp; 2 \\
+        -2 &amp; 1 &amp; 0 &amp; 4
+    \end{array}
+    \right]</me>
+            </p>
+            <p>
+              <m>R_2 \to R_2 - 3R_1, \quad R_3 \to R_3 + 2R_1</m>: <m>\left[\begin{array}{rrr|r}
+        1 &amp; -2 &amp; -3 &amp; 1 \\
+        0 &amp; 7 &amp; 14 &amp; -1 \\
+        0 &amp; -3 &amp; -6 &amp; 6
+    \end{array}\right]</m>
+            </p>
+            <p>
+              <m>R_2 \to \frac{1}{7} R_2</m>: <m>\left[\begin{array}{rrr|r}
+        1 &amp; -2 &amp; -3 &amp; 1 \\
+        0 &amp; 1 &amp; 2 &amp; -\frac{1}{7} \\
+        0 &amp; -3 &amp; -6 &amp; 6
+    \end{array}\right]</m>
+            </p>
+            <p>
+              <m>R_3 \to R_3 + 3R_2</m>: <m>\left[\begin{array}{rrr|r}
+        1 &amp; -2 &amp; -3 &amp; 1 \\
+        0 &amp; 1 &amp; 2 &amp; -\frac{1}{7} \\
+        0 &amp; 0 &amp; 0 &amp; \frac{39}{7}
+    \end{array}\right]</m>
+            </p>
+            <p>By the last row, the system is inconsistent, so no solution exists. Thus, <m>\mathbf{b}</m> is <alert>not</alert> a linear combination of the given vectors.</p>
+          </solution>
+        </activity>
+        <activity xml:id="c2-activity-n23">
+          <statement>
+            <p>If <m>\mathbf{x}=\mathbf{0}</m>, what is <m>A\mathbf{x}</m>? <fillin characters="12" />
+              <em> (1)</em>
+            </p>
+            <p>If <m>A</m> is the zero matrix, what is <m>A\mathbf{x}</m>? <fillin characters="12" />
+              <em> (2)</em>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>
+              <m>\mathbf{0}</m>
+            </p>
+            <p>
+              <em>Blank 2.</em>
+            </p>
+            <p>
+              <m>\mathbf{0}</m>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Matrix-Vector Product Properties</alert>
+        </p>
+        <p>Let <m>A</m> and <m>B</m> be <m>m\times n</m> matrices, and let <m>\mathbf{x}</m> and <m>\mathbf{y}</m> be <m>n</m>-vectors in <m>\mathbb{R}^n</m>. Then:</p>
+        <p>
+          <ul>
+            <li>
+              <p>
+                <m>A({\mathbf{x}}+{\mathbf{y}})=A{\mathbf{x}}+A{\mathbf{y}}</m>.</p>
+            </li>
+            <li>
+              <p>
+                <m>A(r{\mathbf{x}})=r(A{\mathbf{x}})=(rA){\mathbf{x}}</m> for all scalars <m>r</m>.</p>
+            </li>
+            <li>
+              <p>
+                <m>(A+B){\mathbf{x}}=A{\mathbf{x}}+B{\mathbf{x}}</m>.</p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          <em>Proof of (b) (time permitting):</em>
+        </p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>By the definition of matrix-vector multiplication, if <m>A</m> has columns <m>\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n</m>, then: <m>A\mathbf{x} = x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \dots + x_n \mathbf{a}_n.</m>
+        </p>
+        <p>Multiplying <m>\mathbf{x}</m> by <m>r</m> gives: <m>r\mathbf{x} = \begin{bmatrix} r x_1 \\ r x_2 \\ \vdots \\ r x_n \end{bmatrix}.</m>
+        </p>
+        <p>Applying <m>A</m> to this vector:</p>
+        <p>
+          <me>A(r\mathbf{x}) = (r x_1) \mathbf{a}_1 + (r x_2) \mathbf{a}_2 + \dots + (r x_n) \mathbf{a}_n.</me>
+        </p>
+        <p>
+          <me>A(r\mathbf{x}) = r (x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \dots + x_n \mathbf{a}_n) = r(A\mathbf{x}).</me>
+        </p>
+        <p>If we multiply each column <m>\mathbf{a}_j</m> of <m>A</m> by <m>r</m>, we get:</p>
+        <p>
+          <me>rA = \begin{bmatrix} r\mathbf{a}_1 &amp; r\mathbf{a}_2 &amp; \dots &amp; r\mathbf{a}_n \end{bmatrix}.</me>
+        </p>
+        <p>Applying this to <m>\mathbf{x}</m>:</p>
+        <p>
+          <me>(rA)\mathbf{x} = x_1 (r\mathbf{a}_1) + x_2 (r\mathbf{a}_2) + \dots + x_n (r\mathbf{a}_n).</me>
+        </p>
+        <p>
+          <me>(rA)\mathbf{x} = r(x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \dots + x_n \mathbf{a}_n) = r(A\mathbf{x}).</me>
+        </p>
+        <p>
+          <alert>The Dot Product in <m>\mathbb{R}^n</m>
+          </alert>
+        </p>
+        <p>We can express Matrix-Vector multiplication using dot products.</p>
+        <definition xml:id="c2-definition-n24">
+          <statement>
+            <p>An ordered sequence <m>(a_1, a_2, . . . , a_n)</m> of real numbers is called an <alert>ordered <m>n</m>-tuple</alert>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n25">
+          <statement>
+            <p>
+              <m>(-2, \pi, 0, \dfrac{3}{4})</m> is an ordered <fillin characters="12" />
+              <em> (1)</em>-tuple.</p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>four</p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n26">
+          <statement>
+            <p>If <m>(a_1, a_2, . . . , a_n)</m> and <m>(b_1, b_2, . . . , b_n)</m> are two ordered <m>n</m>-tuples, their <alert>dot product</alert> is defined to be the number</p>
+            <p>
+              <me>a_1b_1+a_2b_2+\cdots a_nb_n</me>
+            </p>
+            <p>obtained by multiplying corresponding entries and adding the results.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n27">
+          <statement>
+            <p>The dot product of <m>(-2, \pi, 0, \dfrac{3}{4})</m> and <m>(3, 7, -4, 12)</m> is</p>
+          </statement>
+          <solution>
+            <p>
+              <me>\begin{aligned}
+    &amp;(-2)(3) + (\pi)(7) + (0)(-4) + \left(\frac{3}{4}\right)(12)\\ 
+    &amp;=
+    -6 + 7\pi + 0 + 9 = 7\pi + 3.
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <theorem xml:id="c2-theorem-n28">
+          <statement>
+            <p>Let <m>A</m> be an <m>m\times n</m> matrix and let <m>\mathbf{x}</m> be an <m>n</m>-vector. Then each entry of the vector <m>A\mathbf{x}</m> is the dot product of the corresponding row of <m>A</m> with <m>{\mathbf{x}}</m>.</p>
+            <figure>
+              <caption>From Linear Algebra with Applications, Vretta-Lyryx</caption>
+              <image source="images/c2-Ax-dotproduct.png" width="70%">
+                <shortdescription>Ax dotproduct</shortdescription>
+              </image>
+            </figure>
+          </statement>
+        </theorem>
+        <activity xml:id="c2-activity-n29">
+          <statement>
+            <p>Compute the product <m>A{\mathbf{x}}</m> using the dot product, where <me>A = {\left[ \begin{array}{rrr} 
+-1 &amp; 4 &amp; -5 \\ 
+3 &amp; 1 &amp; -2
+ \end{array} \right]}
+\text{ and } 
+{\mathbf{x}}= {\left[ \begin{array}{r} 2 \\ -3 \\ 4 \end{array} \right]}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <me>\begin{aligned}
+    &amp;A{\mathbf{x}}=
+    \begin{bmatrix} -1 &amp; 4 &amp; -5 \\ 3 &amp; 1 &amp; -2 \end{bmatrix}
+    \begin{bmatrix} 2 \\ -3 \\ 4 \end{bmatrix}\\ 
+    &amp;=
+    \begin{bmatrix} (-1)(2) + (4)(-3) + (-5)(4) \\ (3)(2) + (1)(-3) + (-2)(4) \end{bmatrix}
+    =
+    \begin{bmatrix} -34 \\ -5 \end{bmatrix}
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n30">
+          <statement>
+            <p>For each <m>n \geq 2</m>, the <alert>identity matrix</alert>
+              <m>I_n</m> is the <m>n\times n</m> matrix with 1s on the main diagonal (upper left to lower right), and zeros elsewhere.</p>
+            <figure>
+              <caption>From Linear Algebra with Applications, Vretta-Lyryx</caption>
+              <image source="images/c2-identity.png" width="70%">
+                <shortdescription>identity</shortdescription>
+              </image>
+            </figure>
+          </statement>
+        </definition>
+        <axiom xml:id="c2-fact-n31">
+          <statement>
+            <p>For each <m>n\geq 2</m> we have <m>I_n{\mathbf{x}}={\mathbf{x}}</m> for each <m>n</m>-vector <m>{\mathbf{x}}</m> in <m>\mathbb{R}^n</m>.</p>
+          </statement>
+        </axiom>
+        <activity xml:id="c2-activity-n32">
+          <statement>
+            <p>Let’s verify this fact for <m>I_3</m>.</p>
+          </statement>
+          <solution>
+            <p>
+              <me>\begin{aligned}
+    I_3 {\mathbf{x}}= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} 
+    \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = 
+    \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = {\mathbf{x}}.
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n33">
+          <statement>
+            <p>Consider <m>\mathbb{R}^n</m>, and let <m>\mathbf{e}_j</m> denote the <m>j</m>th column of <m>I_n</m>, i.e,</p>
+            <p>
+              <me>\mathbf{e}_j= \boldsymbol{
+    \begin{bmatrix}
+        t_1 \\
+        t_2 \\
+        \vdots \\
+        t_n
+    \end{bmatrix}
+    \text{ where } t_j = 1, \text{ but } t_i = 0 \text{ for all } i \neq j.}</me>
+            </p>
+            <p>These vectors are called the <alert>standard basis vectors</alert> for <m>\mathbb{R}^n</m> (this name will make sense later).</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n34">
+          <statement>
+            <p>For <m>\mathbb{R}^4</m>, <m>\mathbf{e}_3</m> is</p>
+            <p>Compute <m>A\mathbf{e}_3</m> for <m>A=
+\left[\begin{array}{cccc}
+2 &amp; 0 &amp; 1 &amp; -1 
+\\
+ 3 &amp; -1 &amp; 4 &amp; 0 
+\\
+ 2 &amp; -2 &amp; 3 &amp; -1 
+\end{array}\right]</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <me>\mathbf{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}.</me>
+            </p>
+            <p>
+              <me>A\mathbf{e}_3 =
+    \begin{bmatrix} 2 &amp; 0 &amp; 1 &amp; -1 \\ 3 &amp; -1 &amp; 4 &amp; 0 \\ 2 &amp; -2 &amp; 3 &amp; -1 \end{bmatrix}
+    \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix} =
+    \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix}.</me>
+            </p>
+          </solution>
+        </activity>
+        <axiom xml:id="c2-fact-n35">
+          <statement>
+            <p>If <m>A=\begin{bmatrix}\mathbf{a}_1 &amp; \mathbf{a}_2 &amp;\cdots &amp; \mathbf{a}_n\end{bmatrix}</m> be an <m>m\times n</m> matrix, then <m>A\mathbf{e}_j=\mathbf{a}_j</m> for <m>j=1\ldots n</m>.</p>
+          </statement>
+        </axiom>
+        <theorem xml:id="c2-theorem-n36">
+          <statement>
+            <p>Let <m>A</m> and <m>B</m> be <m>m\times n</m> matrices. If <m>A{\mathbf{x}}=B{\mathbf{x}}</m> for all <m>{\mathbf{x}}</m> in <m>\mathbb{R}^n,</m> then <m>A=B.</m>
+            </p>
+            <p>
+              <em>Proof:</em>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>Since <m>A{\mathbf{x}}= B{\mathbf{x}}</m> for all <m>{\mathbf{x}}</m>, choose <m>{\mathbf{x}}= \mathbf{e}_j</m> for <m>j=1,\dots,n</m>. Then <m>A\mathbf{e}_j = B\mathbf{e}_j</m> for all <m>j</m>. That is all the columns are the same, so <m>A=B</m>.</p>
+          </statement>
+        </theorem>
+        <p>
+          <alert>Transformations</alert>
+        </p>
+        <p>Geometric manipulations can be described via matrix-vector products.</p>
+        <p>Recall that we can interpret 2-vectors geometrically: <m>\begin{bmatrix} a_1 \\ a_2\end{bmatrix}</m> corresponds to the point <m>(a_1,a_2)</m> in the plane. To enhance this geometric representation of a vector <m>\begin{bmatrix} a_1 \\ a_2\end{bmatrix}</m>, it is denoted graphically by an arrow from the origin <m>(0,0)</m> to the point <m>(a_1,a_2)</m>.</p>
+        <p>Similarly, we can define 3-vectors in space.</p>
+        <image source="images/c2-geom2vector.png" width="70%">
+          <shortdescription>image</shortdescription>
+        </image>
+        <image source="images/c2-geom3vector.png" width="70%">
+          <shortdescription>image</shortdescription>
+        </image>
+        <activity xml:id="c2-activity-n37">
+          <statement>
+            <p>Consider the transformation in <m>\mathbb{R}^2</m> given by reflection across the <m>y</m>-axis, i.e. <m>\begin{bmatrix} a_1 \\ a_2\end{bmatrix}</m> gets sent to <m>\begin{bmatrix} -a_1 \\ a_2\end{bmatrix}</m>. We can represent this reflection via a matrix-vector product:</p>
+          </statement>
+          <solution>
+            <p>
+              <me>A = \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n38">
+          <statement>
+            <p>Functions <m>T: \mathbb{R}^n \rightarrow \mathbb{R}^m</m> are called <alert>transformations</alert> from <m>\mathbb{R}^n</m> to <m>\mathbb{R}^m</m>. A transformation <m>T</m> assigns a vector <m>\mathbf{x}</m> in <m>\mathbb{R}^n</m> a uniquely determined vector <m>T(\mathbf{x})</m> in <m>\mathbb{R}^m</m>, called the <alert>image</alert> of <m>{\mathbf{x}}</m> under <m>T</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n39">
+          <statement>
+            <p>
+              <m>T:\mathbb{R}^3\to\mathbb{R}^2</m> given by</p>
+            <p>
+              <m>T\left(\begin{bmatrix} x_1 \\ x_2 \\ x_3\end{bmatrix}\right)=\begin{bmatrix} x_1 +x_3\\ x_2 \end{bmatrix}</m> is a transformation.</p>
+            <p>What’s the image of <m>\begin{bmatrix} 3 \\ -2 \\4\end{bmatrix}</m> under <m>T</m>?</p>
+          </statement>
+          <solution>
+            <p>
+              <me>T\left(\begin{bmatrix} 3 \\ -2 \\ 4\end{bmatrix}\right)
+    = \begin{bmatrix} 3 + 4 \\ -2 \end{bmatrix}
+    = \begin{bmatrix} 7 \\ -2 \end{bmatrix}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c2-definition-n40">
+          <statement>
+            <p>Given an <m>m\times n</m> matrix <m>A</m>, multiplication by <m>A</m> gives a transformation <m>T_A:\mathbb{R}^n\to\mathbb{R}^m</m> by</p>
+            <p>
+              <me>T_A(\mathbf{x})=A\mathbf{x}</me>
+            </p>
+            <p>for each <m>\mathbf{x}</m> in <m>\mathbb{R}^n</m>. <m>T_A</m> is called the <alert>matrix transformation induced by</alert>
+              <m>A</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n41">
+          <statement>
+            <p>Reflection across the <m>y</m>-axis is a matrix transformation with</p>
+            <p>
+              <m>A=<fillin characters="12" />_{\text{(1)}}</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <em>Blank 1.</em>
+            </p>
+            <p>
+              <m>\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</m>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c2-activity-n42">
+          <statement>
+            <p>Is <m>T\left(\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\right)=\begin{bmatrix} x_1 +x_2\\ x_2 \end{bmatrix}</m> a matrix transformation?</p>
+          </statement>
+          <solution>
+            <p>Yes, <m>T</m> is a matrix transformation, since it can be written as <m>A\mathbf{x}</m> where <me>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}.</me>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Question:</alert> Are all transformations realizable as matrix transformations?</p>
+      </section>
+      <section xml:id="section-2-3">
+        <title>Matrix Multiplication</title>
+        <definition xml:id="c2-definition-n43">
+          <statement>
+            <p>Let <m>A</m> be an <m>m\times n</m> matrix, <m>B</m> be an <m>n\times k</m> matrix, and write <me>B=\begin{bmatrix}\mathbf{b}_1 &amp; \mathbf{b}_2 &amp;\cdots &amp; \mathbf{b}_k\end{bmatrix}</me> where <m>\mathbf{b}_j</m> is column <m>j</m> of <m>B</m>. The <alert>product</alert> matrix <m>AB</m> is the <m>m\times k</m> matrix defined as follows:</p>
+            <p>
+              <me>AB=A\begin{bmatrix}\mathbf{b}_1 &amp; \mathbf{b}_2 &amp;\cdots &amp; \mathbf{b}_k\end{bmatrix}=\begin{bmatrix}A\mathbf{b}_1 &amp; A\mathbf{b}_2 &amp;\cdots &amp; A\mathbf{b}_k\end{bmatrix}.</me>
+            </p>
+            <p>in other words, column <m>j</m> of <m>AB</m> is the matrix-vector product <m>A\mathbf{b}_j</m> of <m>A</m> and the corresponding column <m>\mathbf{b}_j</m> of <m>B</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n44">
+          <statement>
+            <p>Let <me>A = \left[ \begin{array}{rrr} 
+1 &amp; -3 &amp; 5 \\
+3 &amp; 1 &amp; 4
+\end{array} \right] 
+\text{ and } 
+B = \left[ \begin{array}{rr} 
+5 &amp; 1 \\ 
+-2 &amp; -6 \\ 
+-1 &amp; 0
+\end{array} \right] .</me> Compute <m>AB</m>.</p>
+          </statement>
+          <solution>
+            <p>Following the definition, we write <m>B</m> in terms of its columns: <m>B = \begin{bmatrix}\mathbf{b}_1 &amp; \mathbf{b}_2\end{bmatrix} = \begin{bmatrix} 
+        \begin{bmatrix}5 \\ -2 \\ -1\end{bmatrix} &amp; 
+        \begin{bmatrix}1 \\ -6 \\ 0\end{bmatrix}
+    \end{bmatrix}</m>
+            </p>
+            <p>Then <m>AB = \begin{bmatrix}A\mathbf{b}_1 &amp; A\mathbf{b}_2\end{bmatrix}</m> where:</p>
+            <p>
+              <m>A\mathbf{b}_1 = \begin{bmatrix}1(5) + (-3)(-2) + 5(-1) \\ 3(5) + 1(-2) + 4(-1)\end{bmatrix} = \begin{bmatrix}5 + 6 - 5 \\ 15 - 2 - 4\end{bmatrix} = \begin{bmatrix}6 \\ 9\end{bmatrix}</m>
+            </p>
+            <p>
+              <m>A\mathbf{b}_2 = \begin{bmatrix}1(1) + (-3)(-6) + 5(0) \\ 3(1) + 1(-6) + 4(0)\end{bmatrix} = \begin{bmatrix}1 + 18 + 0 \\ 3 - 6 + 0\end{bmatrix} = \begin{bmatrix}19 \\ -3\end{bmatrix}</m>
+            </p>
+            <p>Therefore: <m>AB = \begin{bmatrix}6 &amp; 19 \\ 9 &amp; -3\end{bmatrix}</m>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c2-activity-n45">
+          <statement>
+            <p>Let <m>A</m> be <m>m\times n</m> and <m>B</m> be <m>n\times k</m>, and build the induced matrix representations <m>T_A:\mathbb{R}^n\to \mathbb{R}^m</m>, and <m>T_B:\mathbb{R}^k\to\mathbb{R}^n</m>, and consider the composite of <m>T_A</m> and <m>T_B</m>:</p>
+            <p>
+              <me>(T_A\circ T_B):\mathbb{R}^k\to \mathbb{R}^m\; \text{via}\; (T_A\circ T_B)\mathbf{x}=T_A(T_B(\mathbf{x})).</me>
+            </p>
+            <p>Compute <m>(T_A\circ T_B)\mathbf{x}</m>.</p>
+          </statement>
+          <solution>
+            <p>Let <m>\mathbf{x}=\begin{bmatrix}x_1\\\vdots\\x_k\end{bmatrix}</m>. By the definition of matrix-vector product:</p>
+            <p>
+              <m>B\mathbf{x} = x_1\mathbf{b}_1 + \cdots + x_k\mathbf{b}_k</m>, where <m>\mathbf{b}_j</m> is column <m>j</m> of <m>B</m>
+            </p>
+            <p>Therefore: <me>\begin{aligned}
+        (T_A\circ T_B)\mathbf{x} &amp;= T_A(T_B(\mathbf{x})) = T_A(B\mathbf{x}) \\
+        &amp;= T_A(x_1\mathbf{b}_1 + \cdots + x_k\mathbf{b}_k) \\
+        &amp;= x_1T_A(\mathbf{b}_1) + \cdots + x_kT_A(\mathbf{b}_k) \quad\text{(by linearity)} \\
+        &amp;= x_1A\mathbf{b}_1 + \cdots + x_kA\mathbf{b}_k \\
+        &amp;= \begin{bmatrix}A\mathbf{b}_1 &amp; \cdots &amp; A\mathbf{b}_k\end{bmatrix}\begin{bmatrix}x_1\\\vdots\\x_k\end{bmatrix} \\
+        &amp;= (AB)\mathbf{x} \quad\text{(by definition of matrix product)} \\
+        &amp;= T_{AB}\mathbf{x}
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <axiom xml:id="c2-fact-n46">
+          <statement>
+            <p>If <m>A</m> is <m>m\times n</m> and <m>B</m> is <m>n\times k</m>, then the composite of their induced matrix transformations is another matrix transformation: <m>T_A\circ T_B=T_{AB}</m>
+            </p>
+          </statement>
+        </axiom>
+        <p>
+          <alert>Dot Product Definition of Matrix Product</alert>
+        </p>
+        <p>As with matrix-vector products, we have another way to compute matrix products via the dot product:</p>
+        <theorem xml:id="c2-theorem-n47">
+          <statement>
+            <p>Let <m>A</m> be an <m>m\times n</m> matrix, <m>B</m> be an <m>n\times k</m> matrix. The <m>(i,j)</m> entry of <m>AB</m> is the dot product of row <m>i</m> of <m>A</m> with column <m>j</m> of <m>B</m>.</p>
+            <p>This process is shown in the schematic below: <me>\left[\begin{array}{rrrr}
+    {a_{11}} &amp; {a_{12}} &amp; \cdots &amp; {a_{1n}} \\
+    {a_{21}} &amp; {a_{22}} &amp; \cdots &amp; {a_{2n}}\\ 
+    \vdots &amp; \vdots &amp; &amp; \vdots \\ 
+    a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\
+    \vdots &amp; \vdots &amp; &amp; \vdots \\ 
+    a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}  
+\end{array} \right]
+\left[\begin{array}{rrrrrr}
+    {b_{11}} &amp; {b_{12}} &amp; \cdots &amp; b_{1j} &amp; \cdots &amp; {b_{1k}} \\
+    {b_{21}} &amp; {b_{22}} &amp; \cdots &amp; {b_{2j}} &amp; \cdots &amp; {b_{2k}} \\ 
+    \vdots &amp; \vdots &amp; &amp; \vdots &amp; &amp; \vdots \\
+    b_{n1} &amp; b_{n2} &amp; \cdots &amp; b_{nj} &amp; \cdots &amp; b_{nk}
+\end{array} \right] = 
+\left[\begin{array}{rrrr}
+    {c_{11}} &amp; {c_{12}} &amp; \cdots &amp; {c_{1k}} \\ 
+    {c_{21}} &amp; {c_{22}} &amp; \cdots &amp; {c_{2k}} \\ 
+    \vdots &amp; \vdots &amp; {c_{ij}}&amp; \vdots \\ 
+    c_{m1} &amp; c_{m2} &amp; \cdots &amp; c_{mk} 
+\end{array} \right]</me>
+            </p>
+            <p>where <m>c_{ij} = \sum_{\ell=1}^{n} a_{i\ell} b_{\ell,j}</m>.</p>
+            <figure>
+              <caption>From Linear Algebra with Applications, Vretta-Lyryx</caption>
+              <image source="images/c2-AB-dotproduct.png" width="70%">
+                <shortdescription>AB dotproduct</shortdescription>
+              </image>
+            </figure>
+            <p>
+              <alert>Question:</alert> When is the product of two matrices <m>A</m> and <m>B</m> defined? What is the size of the product <m>AB</m>?</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c2-activity-n48">
+          <statement>
+            <p>Let <me>A = \left[ \begin{array}{rrr}
+-3 &amp; -4 &amp; 1 \\  
+2 &amp;  4 &amp; 0 \\ 
+1 &amp; -4 &amp; -5 \\
+\end{array}\right] 
+\text{ and } B = \left[ \begin{array}{rrr}
+-1 &amp; 2 &amp; -4 \\ 
+-4 &amp; -3 &amp; -1 \\ 
+4 &amp; 3 &amp; 1
+\end{array} \right].</me>
+            </p>
+            <p>What is the <m>(2,3)</m> entry of <m>AB</m>?</p>
+          </statement>
+          <solution>
+            <p>
+              <m>\text{Row 2 } \cdot \text{ Column 3: }</m>
+            </p>
+            <p>
+              <m>(2)(-4) + (4)(-1) + (0)(1) = -8 - 4 + 0 = -12</m>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Properties of Matrix Multiplication</alert>
+        </p>
+        <p>Assume that <m>A,B,C</m> are matrices of appropriate sizes. Then:</p>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>A(BC)=\boldsymbol{(AB)C}</m>, i.e. matrix multiplication is <alert>associative</alert>.</p>
+            </li>
+            <li>
+              <p>
+                <m>(A+B)C=\boldsymbol{AC + BC}</m>.</p>
+            </li>
+            <li>
+              <p>
+                <m>C(A+B)=\boldsymbol{CA + CB}</m>.</p>
+            </li>
+            <li>
+              <p>
+                <m>A(rB)=\boldsymbol{r(AB)}=\boldsymbol{(rA)B}</m>.</p>
+            </li>
+            <li>
+              <p>
+                <m>(AB)^T=\boldsymbol{B^TA^T}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          <em>Proof of (d) (if time):</em>
+        </p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>Let <m>A</m> be an <m>m \times n</m> matrix and <m>B</m> be an <m>n \times k</m> matrix. Then:</p>
+        <p>
+          <m>A(rB) = A[rb_{ij}] = [\sum_{j=1}^n a_{ij} (rb_{jk})] = r[\sum_{j=1}^n a_{ij}b_{jk}] = r(AB)</m>
+        </p>
+        <p>Similarly, <m>(rA)B = [ra_{ij}][b_{jk}] = [\sum_{j=1}^n (r a_{ij}) b_{jk}] = r[\sum_{j=1}^n a_{ij}b_{jk}] = r(AB)</m>
+        </p>
+        <p>
+          <em>Facts and Warnings about Matrix Multiplication</em>: Let <m>A</m> be an <m>m \times p</m> matrix and <m>B</m> be a <m>p \times n</m> matrix, so that their product <m>AB</m> is defined and is a <alert>
+            <m>m \times n</m>
+          </alert> matrix.</p>
+        <p>
+          <ol marker="1.">
+            <li>
+              <p>The product <m>BA</m> may not be defined!</p>
+            </li>
+            <li>
+              <p>If <m>BA</m> is also defined, the size of <m>AB</m> and <m>BA</m> may be the same or different.</p>
+            </li>
+            <li>
+              <p>In the case where <m>AB</m> and <m>BA</m> are the same size, <m>AB</m> and <m>BA</m> may be equal or they may be different.</p>
+            </li>
+          </ol>
+        </p>
+        <activity xml:id="c2-activity-n49">
+          <statement>
+            <p>Let <m>A = {\left[ \begin{array}{rr} 0 &amp; -1 \\ -1 &amp; 5 \end{array} \right]} 
+\text{ and } 
+B = {\left[ \begin{array}{rr} 3 &amp; 3 \\ -4 &amp; -3 \end{array} \right]}.</m>
+            </p>
+            <p>Calculate and compare <m>AB</m> and <m>BA</m>, if they are defined.</p>
+          </statement>
+          <solution>
+            <p>
+              <me>AB = \begin{bmatrix}
+        4 &amp; 3 \\
+        -23 &amp; -18
+    \end{bmatrix}</me>
+            </p>
+            <p>
+              <me>BA = \begin{bmatrix}
+        -3 &amp; 12 \\
+        3 &amp; -11
+    \end{bmatrix}</me>
+            </p>
+            <p>The products <m>AB</m> and <m>BA</m> exist but are not equal.</p>
+          </solution>
+        </activity>
+        <activity xml:id="c2-activity-n50">
+          <statement>
+            <p>Consider the following matrices: <me>A = \begin{bmatrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\end{bmatrix}, \quad 
+B = \begin{bmatrix}1 &amp; 2\\3 &amp; 4\\5 &amp; 6\end{bmatrix}, \quad
+C = \begin{bmatrix}1 &amp; 2\\3 &amp; 4\end{bmatrix}</me>
+            </p>
+            <p>For each of the following products, determine (i) whether the product is defined, and (ii) if defined, what is the size of the resulting matrix.</p>
+            <p>
+              <m>AB</m> and <m>BA</m>:</p>
+            <p>
+              <m>BC</m> and <m>CB</m>:</p>
+          </statement>
+          <solution>
+            <p>For <m>AB</m>: Matrix <m>A</m> is <m>2\times 3</m> and matrix <m>B</m> is <m>3\times 2</m>
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>AB</m> is defined because the number of columns of <m>A</m> (3) equals the number of rows of <m>B</m> (3)</p>
+                </li>
+                <li>
+                  <p>The resulting matrix will be <m>2\times 2</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>For <m>BA</m>: Matrix <m>B</m> is <m>3\times 2</m> and matrix <m>A</m> is <m>2\times 3</m>
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>BA</m> is defined because the number of columns of <m>B</m> (2) equals the number of rows of <m>A</m> (2)</p>
+                </li>
+                <li>
+                  <p>The resulting matrix will be <m>3\times 3</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>For <m>BC</m>: Matrix <m>B</m> is <m>3\times 2</m> and matrix <m>C</m> is <m>2\times 2</m>
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>BC</m> is defined because the number of columns of <m>B</m> (2) equals the number of rows of <m>C</m> (2)</p>
+                </li>
+                <li>
+                  <p>The resulting matrix will be <m>3\times 2</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>For <m>CB</m>: Matrix <m>C</m> is <m>2\times 2</m> and matrix <m>B</m> is <m>3\times 2</m>
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>CB</m> is not defined because the number of columns of <m>C</m> (2) does not equal the number of rows of <m>B</m> (3)</p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <em>Key property of identity matrices</em> If <m>A</m> is any <m>{m \times n}</m> matrix, then <me>A I_n = A 
+\text{ and }
+I_m A = A.</me>
+        </p>
+        <p>
+          <alert>Matrix Powers</alert>
+        </p>
+        <p>Using the definition of matrix multiplication, we can also define the powers of square matrices. Let <m>A</m> be a square matrix. Then <me>A^2 = \boldsymbol{A A}, \quad A^3 = \boldsymbol{A A A}, \quad \text{etc.}</me> We make the convention that <me>A^0 = \boldsymbol{I}</me>
+        </p>
+        <p>If <m>p</m> and <m>q</m> are nonnegative integers, then <me>A^pA^q = \boldsymbol{A^{p+q}}
+\text{ and }
+(A^p)^q = \boldsymbol{A^{pq}}.</me>
+        </p>
+        <p>
+          <em>Warning!</em> It is not necessarily the case that <m>(AB)^p = A^pB^p</m>. Why?</p>
+      </section>
+      <section xml:id="section-2-4">
+        <title>Linear Transformations</title>
+        <p>What makes a transformation a matrix transformation?</p>
+        <definition xml:id="c2-definition-n51">
+          <statement>
+            <p>A transformation <m>T:\mathbb{R}^n\to\mathbb{R}^m</m> is a <alert>linear transformation</alert> if</p>
+            <p>
+              <ol marker="(a)">
+                <li>
+                  <p>
+                    <m>T({\mathbf{x}}+ {\mathbf{y}}) = \boldsymbol{T({\mathbf{x}}) + T({\mathbf{y}})}</m> for every <m>{\mathbf{x}}, {\mathbf{y}}\in \mathbb{R}^n</m>.</p>
+                </li>
+                <li>
+                  <p>
+                    <m>T(c{\mathbf{x}})=\boldsymbol{c T({\mathbf{x}})}</m> for every <m>{\mathbf{x}}\in \mathbb{R}^n</m> and <m>c \in \mathbb{R}</m>.</p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n52">
+          <statement>
+            <p>Using <m>\mathbb{R}=\mathbb{R}^1</m>, determine whether <m>T(x)=2x</m> and <m>T(x)=x^2</m> are linear transformations. Explain your reasoning.</p>
+          </statement>
+          <solution>
+            <p>For <m>T(x)=2x</m>: <me>\begin{aligned}
+        T(x+y) &amp;= 2(x+y) = 2x + 2y = T(x) + T(y)\\
+        T(cx) &amp;= 2(cx) = c(2x) = cT(x)
+    
+\end{aligned}</me> For <m>T(x)=x^2</m>: <me>\begin{aligned}
+        T(x+y) &amp;= (x+y)^2 = x^2 + 2xy + y^2 \neq x^2 + y^2 = T(x) + T(y)
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c2-activity-n53">
+          <statement>
+            <p>If <m>T</m> is a linear transformation, what is...</p>
+            <p>
+              <m>T(\mathbf{0})</m>?</p>
+            <p>
+              <m>T(-\mathbf{x})</m>?</p>
+          </statement>
+          <solution>
+            <p>
+              <m>T(\mathbf{0}) = T(0 \mathbf{0}) = 0 T(\mathbf{0})</m>, so <m>T(\mathbf{0}) = \mathbf{0}</m>
+            </p>
+            <p>
+              <m>T(-\mathbf{x}) = T((-1)\mathbf{x}) = (-1)T(\mathbf{x}) = -T(\mathbf{x})</m>
+            </p>
+          </solution>
+        </activity>
+        <p>Recall: A vector <m>{\mathbf{y}}\in\mathbb{R}^n</m> is a <alert>linear combination</alert> of vectors <m>{\mathbf{x}}_1, {\mathbf{x}}_2,\ldots {\mathbf{x}}_k</m> if there are scalars <m>a_1, a_2, \ldots, a_k</m> such that</p>
+        <p>
+          <me>{\mathbf{y}}=a_1{\mathbf{x}}_1+a_2{\mathbf{x}}_2+\cdots a_k{\mathbf{x}}_k.</me>
+        </p>
+        <theorem xml:id="c2-theorem-n54">
+          <statement>
+            <p>If <m>T:\mathbb{R}^n\to\mathbb{R}^m</m> is a linear transformation, then</p>
+            <p>
+              <m>T(a_1{\mathbf{x}}_1+a_2{\mathbf{x}}_2+\cdots a_k{\mathbf{x}}_k)= \boldsymbol{a_1T(\mathbf{x}_1) + a_2T(\mathbf{x}_2) + \cdots + a_kT(\mathbf{x}_k)}</m>
+            </p>
+          </statement>
+        </theorem>
+        <activity xml:id="c2-activity-n55">
+          <statement>
+            <p>Suppose <m>T:\mathbb{R}^2\to\mathbb{R}^3</m> is a linear transformation with <m>T\left(\begin{bmatrix} 1 \\ 2\end{bmatrix}\right)=\begin{bmatrix} -1 \\ 0 \\ 3\end{bmatrix}</m>, <m>T\left(\begin{bmatrix} -1 \\0\end{bmatrix}\right)=\begin{bmatrix} 4\\ 1 \\ 2\end{bmatrix}</m>. Find <m>T\left(\begin{bmatrix} 3 \\ 4\end{bmatrix}\right)</m>.</p>
+          </statement>
+          <solution>
+            <p>Need to write <m>\begin{bmatrix} 3 \\ 4 \end{bmatrix}</m> as a linear combination of <m>\begin{bmatrix} 1 \\ 2 \end{bmatrix}</m> and <m>\begin{bmatrix} -1 \\ 0 \end{bmatrix}</m>.</p>
+            <p>Let <m>a,b</m> be scalars such that: <m>\begin{bmatrix} 3 \\ 4 \end{bmatrix} = a\begin{bmatrix} 1 \\ 2 \end{bmatrix} + b\begin{bmatrix} -1 \\ 0 \end{bmatrix}</m> This gives us the system: <me>\begin{aligned}
+        a - b &amp;= 3 \\
+        2a &amp;= 4
+    
+\end{aligned}</me> From the second equation: <m>a = 2</m> Substituting into first equation: <m>2 - b = 3</m>, so <m>b = -1</m>
+            </p>
+            <p>Therefore: <m>\begin{bmatrix} 3 \\ 4 \end{bmatrix} = 2\begin{bmatrix} 1 \\ 2 \end{bmatrix} - \begin{bmatrix} -1 \\ 0 \end{bmatrix}</m>
+            </p>
+            <p>By linearity of <m>T</m>: <me>\begin{aligned}
+        T\begin{bmatrix} 3 \\ 4 \end{bmatrix} &amp;= 2\begin{bmatrix} -1 \\ 0 \\ 3 \end{bmatrix} - \begin{bmatrix} 4 \\ 1 \\ 2 \end{bmatrix}
+        = \begin{bmatrix} -2 \\ 0 \\ 6 \end{bmatrix} - \begin{bmatrix} 4 \\ 1 \\ 2 \end{bmatrix}
+        = \begin{bmatrix} -6 \\ -1 \\ 4 \end{bmatrix}
+    
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <theorem xml:id="c2-theorem-n56">
+          <statement>
+            <p>Let <m>T:\mathbb{R}^n\to\mathbb{R}^m</m> be a transformation.</p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>T</m> is a linear transformation if and only if it is a matrix transformation.</p>
+                </li>
+                <li>
+                  <p>In this case, <m>T=T_A</m> is the matrix transformation induced by the unique matrix <m>A</m>, given in terms of its columns by</p>
+                  <p>
+                    <me>A=\begin{bmatrix} T(\mathbf{e}_1) &amp; T(\mathbf{e}_2) &amp; \cdots &amp; T(\mathbf{e}_n) \end{bmatrix},</me> where <m>\mathbf{e}_1,\mathbf{e}_2, \ldots \mathbf{e}_n</m> are the standard basis vectors of <m>\mathbb{R}^n</m>.</p>
+                </li>
+              </ul>
+            </p>
+            <p>
+              <em>Proof (if time):</em>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>First show that if <m>T</m> is a matrix transformation, then it is linear: If <m>T = T_A</m> for some matrix <m>A</m>, then: <m>T(\mathbf{x} + \mathbf{y}) = A(\mathbf{x} + \mathbf{y}) = A\mathbf{x} + A\mathbf{y} = T(\mathbf{x}) + T(\mathbf{y})</m>, <m>T(c\mathbf{x}) = A(c\mathbf{x}) = cA\mathbf{x} = cT(\mathbf{x})</m>
+            </p>
+            <p>Now show that if <m>T</m> is linear, then it is a matrix transformation: Let <m>A = \begin{bmatrix} T(\mathbf{e}_1) &amp; T(\mathbf{e}_2) &amp; \cdots &amp; T(\mathbf{e}_n) \end{bmatrix}</m>. For any <m>\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}</m>, we can write: <m>\mathbf{x} = x_1\mathbf{e}_1 + x_2\mathbf{e}_2 + \cdots + x_n\mathbf{e}_n</m>.</p>
+            <p>Then by linearity: <m>T(\mathbf{x}) = T(x_1\mathbf{e}_1 + x_2\mathbf{e}_2 + \cdots + x_n\mathbf{e}_n)</m>
+              <m>= x_1T(\mathbf{e}_1) + x_2T(\mathbf{e}_2) + \cdots + x_nT(\mathbf{e}_n)</m>
+              <m>= A\mathbf{x}</m>.</p>
+            <p>Therefore <m>T = T_A</m> is a matrix transformation.</p>
+            <p>For uniqueness, suppose <m>T = T_B</m> for some other matrix <m>B</m>. Then: <m>A\mathbf{e}_i = T(\mathbf{e}_i) = B\mathbf{e}_i</m> for all <m>i</m>. Therefore the columns of <m>A</m> and <m>B</m> are identical, so <m>A = B</m>.</p>
+          </statement>
+        </theorem>
+        <corollary xml:id="c2-corollary-n57">
+          <statement>
+            <p>If <m>T:\mathbb{R}^k\to\mathbb{R}^n</m>, and <m>S:\mathbb{R}^n\to\mathbb{R}^m</m> are linear transformations, then <m>S\circ T</m> is a linear transformation.</p>
+          </statement>
+        </corollary>
+        <activity xml:id="c2-activity-n58">
+          <statement>
+            <p>Consider the linear transformation <m>T:\mathbb{R}^2\to\mathbb{R}^2</m> defined by <m>T\left(\begin{bmatrix} x \\ y \end{bmatrix}\right)=\begin{bmatrix} 3x + \frac{3}{2}y \\ x + 2y \end{bmatrix}</m>. Find the matrix <m>A</m> such that <m>T = T_A</m>.</p>
+          </statement>
+          <solution>
+            <p>To find the matrix <m>A</m>, we need to find the images of the standard basis vectors under <m>T</m>:</p>
+            <p>
+              <m>T(\mathbf{e}_1) = T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right) = \begin{bmatrix} 3(1) + \frac{3}{2}(0) \\ 1(1) + 2(0) \end{bmatrix} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}</m>
+            </p>
+            <p>
+              <m>T(\mathbf{e}_2) = T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 3(0) + \frac{3}{2}(1) \\ 1(0) + 2(1) \end{bmatrix} = \begin{bmatrix} \frac{3}{2} \\ 2 \end{bmatrix}</m>
+            </p>
+            <p>Therefore, by the theorem, the matrix is:</p>
+            <p>
+              <m>A = \begin{bmatrix} T(\mathbf{e}_1) &amp; T(\mathbf{e}_2) \end{bmatrix} = \begin{bmatrix} 3 &amp; \frac{3}{2} \\ 1 &amp; 2 \end{bmatrix}</m>
+            </p>
+          </solution>
+        </activity>
+        <p>The following figure provides a visualization of this transformation.</p>
+        <figure>
+          <caption>The distorted (aqua) grid obtained by applying the linear transformation <m>\mathbf{f}(\mathbf{x}) = T(\mathbf{x})</m> to a (gray) square grid. From: Stanford’s MATH 51 textbook</caption>
+          <image source="images/c2-math-51-fig-13-4-1.png" width="70%">
+            <shortdescription>math 51 fig 13 4 1</shortdescription>
+          </image>
+        </figure>
+        <activity xml:id="c2-activity-n59">
+          <statement>
+            <p>Define <m>T:\mathbb{R}^2\to\mathbb{R}^3</m> by <m>T\left(\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\right)=\begin{bmatrix} x_1 +x_2 \\ x_1 \\ 3x_2 \end{bmatrix}</m>. Show <m>T</m> is a linear transformation.</p>
+            <p>Find <m>A</m>, where <m>T=T_A</m>.</p>
+            <p>Is there an <m>\mathbf{x}</m> in <m>\mathbb{R}^2</m> with <m>T(\mathbf{x})=\begin{bmatrix} 4 \\ -1 \\ 6\end{bmatrix}?</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <m>T(\mathbf{x} + \mathbf{y}) = \begin{bmatrix} (x_1+y_1)+(x_2+y_2) \\ x_1+y_1 \\ 3(x_2+y_2) \end{bmatrix} = \begin{bmatrix} x_1+x_2 \\ x_1 \\ 3x_2 \end{bmatrix} + \begin{bmatrix} y_1+y_2 \\ y_1 \\ 3y_2 \end{bmatrix} = T(\mathbf{x}) + T(\mathbf{y})</m>
+            </p>
+            <p>
+              <m>T(c\mathbf{x}) = \begin{bmatrix} cx_1+cx_2 \\ cx_1 \\ 3cx_2 \end{bmatrix} = c\begin{bmatrix} x_1+x_2 \\ x_1 \\ 3x_2 \end{bmatrix} = cT(\mathbf{x})</m>
+            </p>
+            <p>
+              <m>A = \begin{bmatrix} T(\mathbf{e}_1) &amp; T(\mathbf{e}_2) \end{bmatrix} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}</m>
+            </p>
+            <p>We need to solve <m>A\mathbf{x} = \begin{bmatrix} 4 \\ -1 \\ 6 \end{bmatrix}</m> This gives the system: <m>x_1 + x_2 = 4</m>, <m>x_1 = -1</m>, <m>3x_2 = 6</m>
+            </p>
+            <p>From third equation: <m>x_2 = 2</m>. From second equation: <m>x_1 = -1</m>. This does not satisfy first equation: <m>-1 + 2 = 1 \neq 4</m>
+            </p>
+            <p>Therefore, there is no such <m>\mathbf{x}</m>.</p>
+          </solution>
+        </activity>
+      </section>
+      <section xml:id="section-2-5">
+        <title>Matrix Inverses</title>
+        <definition xml:id="c2-definition-n60">
+          <statement>
+            <p>An <m>{n \times n}</m> matrix <m>A</m> is called <alert>nonsingular</alert>, or <alert>invertible</alert>, if there exists an <m>{n \times n}</m> matrix <m>B</m> such that <alert>
+                <m>AB = BA = I_n</m>
+              </alert>. Such a <m>B</m> is called the <alert>inverse</alert> of <m>A</m>. If no such <m>B</m> exists, <m>A</m> is called <alert>singular</alert> or <alert>noninvertible</alert>.</p>
+            <p>
+              <em>Idea</em>: The inverse of a matrix mimics the reciprocal of a real number.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c2-activity-n61">
+          <statement>
+            <p>Let <m>A = {\left[ \begin{array}{rr} 1 &amp; 3 \\ 1 &amp; 4 \end{array} \right]}</m> and <m>B = {\left[ \begin{array}{rr} 4 &amp; -3 \\ -1 &amp; 1 \end{array} \right]}</m>. Compute both <m>AB</m> and <m>BA</m>, and make a conclusion using the language of inverses.</p>
+          </statement>
+          <solution>
+            <p>
+              <me>AB = \left[\begin{array}{cc}
+        1 &amp; 0 \\
+        0 &amp; 1
+    \end{array}\right] = I_2
+    \quad\text{and}\quad
+    BA = \left[\begin{array}{cc}
+        1 &amp; 0 \\
+        0 &amp; 1
+    \end{array}\right] = I_2</me>
+            </p>
+            <p>
+              <m>\text{Therefore, } B \text{ is the inverse of } A.</m>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <em>Fact:</em> The inverse of a matrix, if it exists, is unique. Therefore, we can write <alert>
+            <m>A^{-1}</m>
+          </alert> for the inverse of <m>A</m>.</p>
+        <p>
+          <em>Fact:</em> If <m>AB = I_n</m>, then <m>BA = I_n</m>.</p>
+        <activity xml:id="c2-activity-n62">
+          <statement>
+            <p>Does <m>A=\begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}</m> have an inverse?</p>
+          </statement>
+          <solution>
+            <p>Let’s suppose <m>A</m> had an inverse <m>B = \begin{bmatrix} x &amp; y \\ z &amp; w \end{bmatrix}</m>. Then: <me>\begin{aligned}
+        AB &amp;= I_2\\[5pt]
+        \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\begin{bmatrix} x &amp; y \\ z &amp; w \end{bmatrix} &amp;= \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+    
+\end{aligned}</me>
+            </p>
+            <p>This gives us the system of equations: <me>\begin{aligned}
+        2x + z &amp;= 1\\
+        2y + w &amp;= 0\\
+        0x + 0z &amp;= 0\\
+        0y + 0w &amp;= 1
+    
+\end{aligned}</me>
+            </p>
+            <p>The last equation states that <m>0 = 1</m>, which is impossible.</p>
+            <p>Therefore, <m>A</m> cannot have an inverse. This means <m>A</m> is singular.</p>
+          </solution>
+        </activity>
+        <p>
+          <em>Theorem:</em> If both <m>A</m> and <m>B</m> are nonsingular <m>{n \times n}</m> matrices, then the matrix <m>AB</m> is <alert>nonsingular</alert> and its inverse is <m>(AB){^{-1}}=</m>
+          <alert>
+            <m>B^{-1} A^{-1}</m>
+          </alert>.</p>
+        <p>
+          <em>Proof:</em>
+        </p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>First, <m>(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = A I_n A^{-1} = AA^{-1} = I_n</m>
+        </p>
+        <p>Similarly, <m>(B^{-1}A^{-1})(AB) = B^{-1}(A^{-1}A)B = B^{-1} I_n B = B^{-1}B = I_n</m>
+        </p>
+        <p>Follow up facts:</p>
+        <p>
+          <ul>
+            <li>
+              <p>If <m>A_1, A_2,\ldots, A_k</m> are <m>n\times n</m> invertible/nonsingular matrices, then <m>A_1A_2\cdots A_k</m> is invertible/nonsingular and <m>(A_1A_2\cdots A_k)^{-1}=\boldsymbol{A_k^{-1}\cdots A_2^{-1} A_1^{-1}}</m>
+              </p>
+            </li>
+            <li>
+              <p>If <m>A</m> is invertible/nonsingular, then <m>A^{-1}</m> is invertible/nonsingular and <m>(A^{-1})^{-1}=\boldsymbol{A}</m>.</p>
+            </li>
+            <li>
+              <p>If <m>A</m> is invertible/nonsingular, then <m>A^T</m> is invertible/nonsingular and <m>(A^{-1})^T=\boldsymbol{(A^T)^{-1}}</m>.</p>
+            </li>
+          </ul>
+        </p>
+        <theorem xml:id="c2-theorem-n63">
+          <statement>
+            <p>(Inverse of <m>2\times 2</m> matrix) The <m>2\times 2</m> matrix <me>A=\begin{bmatrix}
+    a &amp; b \\ c &amp; d
+\end{bmatrix}</me> is invertible if and only if <m>ad-bc\neq 0</m>, in which case</p>
+            <p>
+              <me>A^{-1}=\dfrac{1}{ad-bc}\begin{bmatrix}
+    d &amp; -b \\ -c &amp; a
+\end{bmatrix}</me>
+            </p>
+            <p>We’ll learn how to compute inverses for bigger matrices soon.</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c2-activity-n64">
+          <statement>
+            <p>Find the inverse of each matrix, if possible.</p>
+            <p>
+              <me>A=\begin{bmatrix}
+    -2 &amp; -3 \\ 4 &amp; 6
+\end{bmatrix},\; B=\begin{bmatrix}
+    1 &amp; 6 \\ 2 &amp; 3
+\end{bmatrix}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>For <m>A</m>: <m>\det(A) = (-2)(6) - (-3)(4) = -12 - (-12) = 0</m>, so <m>A</m> is not invertible.</p>
+            <p>For <m>B</m>: <m>\det(B) = (1)(3) - (6)(2) = 3 - 12 = -9 \neq 0</m>, so <m>B^{-1} = \frac{1}{-9}{\left[ \begin{array}{rr} 3 &amp; -6 \\ -2 &amp; 1 \end{array} \right]} = {\left[ \begin{array}{rr} -1/3 &amp; 2/3 \\ 2/9 &amp; -1/9 \end{array} \right]}</m>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Linear Systems and Inverses</alert>
+        </p>
+        <p>If <m>A</m> is an <m>{n \times n}</m> matrix, then the linear system <m>A{\mathbf{x}}= {\mathbf{b}}</m> is a system of <alert>
+            <m>n</m>
+          </alert> equations in <alert>
+            <m>n</m>
+          </alert> unknowns. Suppose <m>A</m> is nonsingular. How can we use <m>A^{-1}</m> to solve the system <m>A{\mathbf{x}}= {\mathbf{b}}</m>?</p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>Multiply both sides of <m>A{\mathbf{x}}= {\mathbf{b}}</m> by <m>A^{-1}</m> on the left: <me>\begin{aligned}
+        A{\mathbf{x}}&amp;= {\mathbf{b}}\\
+        A^{-1}(A{\mathbf{x}}) &amp;= A^{-1}{\mathbf{b}}\\
+        (A^{-1}A){\mathbf{x}}&amp;= A^{-1}{\mathbf{b}}\\
+        I_n{\mathbf{x}}&amp;= A^{-1}{\mathbf{b}}\\
+        {\mathbf{x}}&amp;= A^{-1}{\mathbf{b}}
+    
+\end{aligned}</me>
+        </p>
+        <p>Therefore, when <m>A</m> is nonsingular, <m>{\mathbf{x}}= A^{-1}{\mathbf{b}}</m> is the solution to <m>A{\mathbf{x}}= {\mathbf{b}}</m>.</p>
+        <p>
+          <em>Consequences</em>:</p>
+        <p>
+          <ul>
+            <li>
+              <p>When <m>A^{-1}</m> exists, then <m>A{\mathbf{x}}= {\mathbf{b}}</m> has a <alert>unique</alert> solution.</p>
+            </li>
+            <li>
+              <p>If <m>A</m> is invertible/nonsingular, then the ONLY solution to the homogeneous system <alert>
+                  <m>A{\mathbf{x}}= {\mathbf{0}}</m>
+                </alert> is <m>{\mathbf{x}}=\boldsymbol{{\mathbf{0}}}</m>.</p>
+            </li>
+          </ul>
+        </p>
+        <activity xml:id="c2-activity-n65">
+          <statement>
+            <p>Use the inverse of <m>A</m> to solve the linear systems <m>A{\mathbf{x}}= {\mathbf{b}}</m>, <m>A{\mathbf{x}}= {{\mathbf{c}}}</m>, and <m>A{\mathbf{x}}= {\mathbf{0}}</m>, where <m>A</m>, <m>{\mathbf{b}}</m>, and <m>{{\mathbf{c}}}</m> are given below. <me>A = {\left[ \begin{array}{rr} 1 &amp; 2 \\ 3 &amp; 4 \end{array} \right]}, 
+\quad 
+A^{-1}= {\left[ \begin{array}{rr} -2 &amp; 1 \\ \frac{3}{2} &amp; -\frac{1}{2} \end{array} \right]}, 
+\quad
+{\mathbf{b}}= {\left[ \begin{array}{r} 4 \\ 2 \end{array} \right]},
+\ \text{ and } \ 
+{{\mathbf{c}}} = {\left[ \begin{array}{r} 3 \\ 2 \end{array} \right]}.</me>
+            </p>
+          </statement>
+          <solution>
+            <p>For <m>A{\mathbf{x}}= {\mathbf{b}}</m>: <m>{\mathbf{x}}= A^{-1}{\mathbf{b}}= {\left[ \begin{array}{rr} -2 &amp; 1 \\ \frac{3}{2} &amp; -\frac{1}{2} \end{array} \right]}{\left[ \begin{array}{r} 4 \\ 2 \end{array} \right]} = {\left[ \begin{array}{r} -6 \\ 5 \end{array} \right]}</m>
+            </p>
+            <p>For <m>A{\mathbf{x}}= {\mathbf{c}}</m>: <m>{\mathbf{x}}= A^{-1}{\mathbf{c}}= {\left[ \begin{array}{rr} -2 &amp; 1 \\ \frac{3}{2} &amp; -\frac{1}{2} \end{array} \right]}{\left[ \begin{array}{r} 3 \\ 2 \end{array} \right]} = {\left[ \begin{array}{r} -4 \\ \frac{7}{2} \end{array} \right]}</m>
+            </p>
+            <p>For <m>A{\mathbf{x}}= {\mathbf{0}}</m>: <m>{\mathbf{x}}= A^{-1}{\mathbf{0}}= {\left[ \begin{array}{r} 0 \\ 0 \end{array} \right]}</m>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          <alert>Algorithm for Calculating Inverses</alert>
+        </p>
+        <p>For a given <m>n\times n</m> matrix <m>A</m>, if we are looking for an inverse for <m>A</m> (call this matrix <m>X</m>), we must have <m>AX=I_n</m>. We are solving <m>n</m> linear systems simultaneously:</p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>
+          <m>A\begin{bmatrix} x_{11} \\ x_{21} \\ \vdots \\ x_{n1} \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},\ 
+    A\begin{bmatrix} x_{12} \\ x_{22} \\ \vdots \\ x_{n2} \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},\ 
+    \cdots,\ 
+    A\begin{bmatrix} x_{1n} \\ x_{2n} \\ \vdots \\ x_{nn} \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}</m>
+        </p>
+        <p>Since, to solve each system, we wish to reduce the matrix <m>A</m> down to its RREF each time, we can combine all the systems into one big augmented matrix:</p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>
+          <m>[A \mid I_n] = \left[\begin{array}{rrrr|rrrr} 
+        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+    \end{array}\right]</m>
+        </p>
+        <p>
+          <alert>Algorithm for computing <m>A^{-1}</m>
+          </alert>
+        </p>
+        <p>
+          <ul>
+            <li>
+              <p>Set up the augmented matrix <m>[A \mathrel{\vert}I_n]</m>.</p>
+            </li>
+            <li>
+              <p>Apply elementary row operations to <m>[A \mathrel{\vert}I_n]</m> to reduce it to <m>[I_n \mathrel{\vert}A^{-1}]</m>.</p>
+            </li>
+          </ul>
+        </p>
+        <p>If <m>A</m> is an <m>n\times n</m> matrix, either <m>A</m> can be reduced to <m>I_n</m> by elementary row operations or it cannot. In the first case, the algorithm produces <m>A^{-1}</m>; in the second case, <m>A^{-1}</m> does not exist.</p>
+        <activity xml:id="c2-activity-n66">
+          <statement>
+            <p>Find <m>A^{-1}</m> where <m>A = {\left[ \begin{array}{rrr} 1 &amp; 1 &amp; 4 \\ 2 &amp; 3 &amp; 2 \\ 0 &amp; 0 &amp; 1 \end{array} \right]}</m>.</p>
+          </statement>
+          <solution>
+            <p>
+              <m>[A \mathrel{\vert}I_3] = {\left[ \begin{array}{rrr|rrr} 1 &amp; 1 &amp; 4 &amp; 1 &amp; 0 &amp; 0 \\ 2 &amp; 3 &amp; 2 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]}</m>
+            </p>
+            <p>
+              <m>R_2 \to R_2 - 2R_1</m>: <m>{\left[ \begin{array}{rrr|rrr} 1 &amp; 1 &amp; 4 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; -6 &amp; -2 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]}</m>
+            </p>
+            <p>
+              <m>R_1 \to R_1 - R_2</m>: <m>{\left[ \begin{array}{rrr|rrr} 1 &amp; 0 &amp; 10 &amp; 3 &amp; -1 &amp; 0 \\ 0 &amp; 1 &amp; -6 &amp; -2 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]}</m>
+            </p>
+            <p>
+              <m>R_1 \to R_1 - 10R_3, R_2 \to R_2 + 6R_3</m>: <m>{\left[ \begin{array}{rrr|rrr} 1 &amp; 0 &amp; 0 &amp; 3 &amp; -1 &amp; -10 \\ 0 &amp; 1 &amp; 0 &amp; -2 &amp; 1 &amp; 6 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]}</m>
+            </p>
+            <p>Therefore: <m>A^{-1} = {\left[ \begin{array}{rrr} 3 &amp; -1 &amp; -10 \\ -2 &amp; 1 &amp; 6 \\ 0 &amp; 0 &amp; 1 \end{array} \right]}</m>
+            </p>
+          </solution>
+        </activity>
+        <p>Below is a useful compilation of facts and theorems, some of which we’ve discussed in class. You can find the remainder of the proofs in your textbook.</p>
+        <p>
+          <alert>Box Of Facts/Invertibility Criteria</alert>
+        </p>
+        <p>Let <m>A</m> be an <m>{n \times n}</m> matrix. The following are equivalent:</p>
+        <p>
+          <ol marker="1.">
+            <li>
+              <p>
+                <m>A</m> is nonsingular.</p>
+            </li>
+            <li>
+              <p>
+                <m>A{\mathbf{x}}= {\mathbf{0}}</m> has only the trivial solution.</p>
+            </li>
+            <li>
+              <p>
+                <m>A</m> is row equivalent to <m>I_n</m>.</p>
+            </li>
+            <li>
+              <p>The linear system <m>A{\mathbf{x}}= {\mathbf{b}}</m> has a unique solution for every <m>n \times 1</m> matrix <m>{\mathbf{b}}</m>.</p>
+            </li>
+            <li>
+              <p>
+                <m>\mathop{\mathrm{rank}}(A)=n</m>.</p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          <alert>Inverses of Matrix Transformations</alert>
+        </p>
+        <p>Let <m>T=T_A:\mathbb{R}^n\to\mathbb{R}^n</m> be a matrix transformation induced by the <m>n\times n</m> matrix <m>A</m>. What does invertibility imply about the geometry of the transformation <m>T_A</m>?</p>
+        <p>Consider <m>T'=T_{A^{-1}}</m>. What happens when we compose them?</p>
+        <p>
+          <m>T\circ T'(\mathbf{x})=\boldsymbol{T_A(T_{A^{-1}}(\mathbf{x})) = T_A(A^{-1}\mathbf{x}) = A(A^{-1}\mathbf{x}) = (AA^{-1})\mathbf{x} = I_n\mathbf{x} = \mathbf{x}}</m>
+        </p>
+        <p>
+          <m>T'\circ T(\mathbf{x})=\boldsymbol{T_{A^{-1}}(T_A(\mathbf{x})) = T_{A^{-1}}(A\mathbf{x}) = A^{-1}(A\mathbf{x}) = (A^{-1}A)\mathbf{x} = I_n\mathbf{x} = \mathbf{x}}</m>
+        </p>
+        <definition xml:id="c2-definition-n67">
+          <statement>
+            <p>Given a matrix transformation <m>T:\mathbb{R}^n\to\mathbb{R}^n</m>, if there exists a transformation <m>S:\mathbb{R}^n\to\mathbb{R}^n</m> such that <m>S(T(\mathbf{x}))=\boldsymbol{T(S(\mathbf{x}))}=\boldsymbol{\mathbf{x}}</m> for all <m>\mathbf{x}\in \mathbb{R}^n</m>, we say that <m>T</m> has an inverse.</p>
+          </statement>
+        </definition>
+        <theorem xml:id="c2-theorem-n68">
+          <statement>
+            <p>Let <m>T:\mathbb{R}^n\to\mathbb{R}^n</m> denote the matrix transformation induced by an <m>n\times n</m> matrix <m>A</m>. Then <m>A</m> is invertible if and only if <m>T</m> has an inverse. In this case, <m>T</m> has exactly one inverse (which we denote as <m>T^{-1}</m>), and <m>T^{-1} : \mathbb{R}^n\to\mathbb{R}^n</m> is the transformation induced by the matrix <m>A^{-1}</m>. In other words <me>(T_A)^{-1} = T_{A^{-1}}</me>
+            </p>
+            <p>
+              <m>T</m> and <m>T^{-1}</m>
+              <q>reverse</q> or <q>undo</q> the action of each other.</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c2-activity-n69">
+          <statement>
+            <p>Consider <m>T:\mathbb{R}^2\to\mathbb{R}^2</m> given by reflection across the <m>x</m>-axis. Find the matrix representing this transformation, and find the inverse.</p>
+          </statement>
+          <solution>
+            <p>T is given by matrix <m>A = {\left[ \begin{array}{rr} 1 &amp; 0 \\ 0 &amp; -1 \end{array} \right]}</m>
+            </p>
+            <p>Since <m>A^2 = I_2</m>, <m>A</m> is its own inverse, so <m>T^{-1} = T</m>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c2-activity-n70">
+          <statement>
+            <p>Consider <m>P:\mathbb{R}^2\to\mathbb{R}^2</m> by <m>P\left(\begin{bmatrix} a_1 \\ a_2\end{bmatrix}\right)=\begin{bmatrix} a_1 \\ 0\end{bmatrix}</m>.</p>
+            <p>Is this a matrix transformation?</p>
+            <p>Is this invertible?</p>
+          </statement>
+          <solution>
+            <p>Yes, <m>P</m> is a matrix transformation. It can be represented by the matrix <m>A = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}</m>
+            </p>
+            <p>To verify: <m>P\left(\begin{bmatrix} a_1 \\ a_2\end{bmatrix}\right) = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\begin{bmatrix} a_1 \\ a_2\end{bmatrix} = \begin{bmatrix} a_1 \\ 0\end{bmatrix}</m>
+            </p>
+            <p>No, <m>P</m> is not invertible. Note that <m>\det(A) = 0</m>, so <m>A</m> is not invertible.</p>
+          </solution>
+        </activity>
+      </section>
+    </chapter>
+    <chapter xml:id="chapter-3">
+      <title>Determinants</title>
+      <introduction>
+        <p> These notes use material from your textbook <em>Linear Algebra with Applications</em> by W. Keith Nicholson [LAWA]. Sections are numbered in their order of presentation within each chapter.</p>
+        <p>Learning goals:</p>
+        <p>
+          <ul>
+            <li>
+              <p>Be able to compute determinants of small (<m>2 \times 2</m> and <m>3 \times 3</m>) matrices using cofactor expansion</p>
+            </li>
+            <li>
+              <p>Be familiar with the properties of determinants</p>
+            </li>
+            <li>
+              <p>Be able to compute determinants of larger matrices using properties of determinants</p>
+            </li>
+            <li>
+              <p>Be able to compute determinants of larger matrices using cofactor expansion through specific choice of row/column</p>
+            </li>
+            <li>
+              <p>Know the relationship between determinants and inverses</p>
+            </li>
+          </ul>
+        </p>
+      </introduction>
+      <section xml:id="section-3-1">
+        <title>The Cofactor Expansion</title>
+        <p>In this chapter, we are working with square <m>n\times n</m> matrices.</p>
+        <p>
+          <alert>Goal of this section:</alert> Find a number (called a <alert>determinant</alert>) that we can calculate from a matrix that tells us whether or not it’s invertible.</p>
+        <p>Let’s start with <m>2\times 2</m>: <m>A=\begin{bmatrix}a &amp; b \\ c &amp; d \end{bmatrix}</m>.</p>
+        <p>We saw a result in the previous chapter that</p>
+        <p>
+          <me>A^{-1}=\dfrac{1}{ad-bc}\begin{bmatrix}
+d &amp; -b \\ -c &amp; a
+\end{bmatrix}</me>
+        </p>
+        <p>When can this go wrong?</p>
+        <p>
+          <em>Answer.</em>
+        </p>
+        <p>
+          <m>ad-bc=0</m>: formula is undefined due to division by <m>0</m>
+        </p>
+        <definition xml:id="c3-definition-n1">
+          <statement>
+            <p>The <alert>determinant</alert> of <m>A=\begin{bmatrix}a &amp; b \\ c &amp; d \end{bmatrix}</m> is</p>
+            <p>
+              <me>\det(A)=ad-bc.</me>
+            </p>
+          </statement>
+        </definition>
+        <activity xml:id="c3-activity-n2">
+          <statement>
+            <p>Find the determinant of <m>A=\begin{bmatrix} 3 &amp; 1 \\ 4 &amp; 2 \end{bmatrix}</m> and <m>B=\begin{bmatrix}3 &amp; 2 \\ 6 &amp; 4 \end{bmatrix}</m>
+            </p>
+          </statement>
+          <solution>
+            <p>For <m>A</m>: <m>\det(A) = 3(2) - 1(4) = 6 - 4 = 2</m>
+            </p>
+            <p>For <m>B</m>: <m>\det(B) = 3(4) - 2(6) = 12 - 12 = 0</m>
+            </p>
+          </solution>
+        </activity>
+        <p>We can use the <m>2\times 2</m> determinant to build the <m>3\times 3</m> determinant. It will <alert>not</alert> be clear right now why this is the correct analogous function, but we’ll explore that more later.</p>
+        <definition xml:id="c3-definition-n3">
+          <statement>
+            <p>Let <m>A</m> be a <m>3\times 3</m> matrix. The <m>(i,j)-</m>
+              <alert>minor</alert> of <m>A</m>, denoted <m>\mathop{\mathrm{minor}}(A)_{ij}</m>, is the determinant of the <m>2\times 2</m> matrix which results from deleting the <m>i^{\text{th}}</m> row and <m>j^{\text{th}}</m> column of <m>A</m>.</p>
+            <p>In general, if <m>A</m> is <m>n\times n</m>, then the <m>i,j^{\text{th}}</m> minor of <m>A</m> is the determinant of the <m>(n-1)\times(n-1)</m> matrix which results from deleting the <m>i^{\text{th}}</m> row and <m>j^{\text{th}}</m> column of <m>A</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="c3-activity-n4">
+          <statement>
+            <p>Find <m>\mathop{\mathrm{minor}}(A)_{11}</m> and <m>\mathop{\mathrm{minor}}(A)_{23}</m> for <me>A=\begin{bmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 3 &amp; 2 \\ 3 &amp; 2 &amp; 1
+\end{bmatrix}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\mathop{\mathrm{minor}}(A)_{11} = \det\begin{bmatrix} 3 &amp; 2 \\ 2 &amp; 1 \end{bmatrix} = 3(1) - 2(2) = -1</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{minor}}(A)_{23} = \det\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 2 \end{bmatrix} = 1(2) - 2(3) = -4</m>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c3-definition-n5">
+          <statement>
+            <p>Let <m>A</m> be a <m>n\times n</m> matrix. The <m>(i,j)</m>-<alert>cofactor</alert> of <m>A</m>, denoted <m>\mathop{\mathrm{cof}}(A)_{ij}</m>, is the defined to be <me>\mathop{\mathrm{cof}}(A)_{ij}=(-1)^{i+j}\mathop{\mathrm{minor}}(A)_{ij}</me>
+            </p>
+          </statement>
+        </definition>
+        <activity xml:id="c3-activity-n6">
+          <statement>
+            <p>Find <m>\mathop{\mathrm{cof}}(A)_{11}</m> and <m>\mathop{\mathrm{cof}}(A)_{23}</m> for <me>A=\begin{bmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 3 &amp; 2 \\ 3 &amp; 2 &amp; 1
+\end{bmatrix}</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{11} = (-1)^{1+1}\mathop{\mathrm{minor}}(A)_{11} = (1)(-1) = -1</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{23} = (-1)^{2+3}\mathop{\mathrm{minor}}(A)_{23} = (-1)(-4) = 4</m>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c3-definition-n7">
+          <statement>
+            <p>Let <m>A</m> be a <m>3\times 3</m> matrix. Then the <alert>determinant</alert> of <m>A</m>, <m>\det(A)</m>, is calculated by picking a row (or column), taking the product of each entry of that row (column) with its cofactor, then adding these products together. In other words, if we pick row <m>i</m>, this process is called <alert>expanding along the <m>i</m>-th row</alert> and is given as <me>\det(A)=a_{i1}\mathop{\mathrm{cof}}(A)_{i1}+a_{i2}\mathop{\mathrm{cof}}(A)_{i2}+a_{i3}\mathop{\mathrm{cof}}(A)_{i3}</me>
+            </p>
+            <p>This process is called <alert>calculating the determinant by cofactor expansion</alert>.</p>
+          </statement>
+        </definition>
+        <figure>
+          <caption>Expansion of a <m>3\times3</m> determinant along row 1. The signs are <m>(-1)^{1+j}</m>: <m>+</m>, <m>-</m>, <m>+</m>.</caption>
+          <image source="images/c3-tikz-9404ea62f86ec143.svg" width="100%">
+            <shortdescription>First-row cofactor expansion of a 3 by 3 matrix. Each panel crosses out row 1 and column j, highlights the remaining 2 by 2 minor, and shows the signed term. The three signs are plus, minus, plus.</shortdescription>
+          </image>
+        </figure>
+        <activity xml:id="c3-activity-n8">
+          <statement>
+            <p>Find the determinant of <me>A=\begin{bmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 3 &amp; 2 \\ 3 &amp; 2 &amp; 1
+\end{bmatrix}</me> by expanding along row 1. Also try expanding along column 2.</p>
+            <p>To track the sign <m>(-1)^{i+j}</m>, we can view the matrix as a checkerboard pattern:</p>
+          </statement>
+          <solution>
+            <p>Using row 1: <m>\det(A) = 1\mathop{\mathrm{cof}}(A)_{11} + 2\mathop{\mathrm{cof}}(A)_{12} + 3\mathop{\mathrm{cof}}(A)_{13}</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{11} = (-1)^{1+1}\det\begin{bmatrix} 3 &amp; 2 \\ 2 &amp; 1 \end{bmatrix} = (1)(3\cdot 1 - 2\cdot 2) = -1</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{12} = (-1)^{1+2}\det\begin{bmatrix} 4 &amp; 2 \\ 3 &amp; 1 \end{bmatrix} = (-1)(4\cdot 1 - 2\cdot 3) = 2</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{13} = (-1)^{1+3}\det\begin{bmatrix} 4 &amp; 3 \\ 3 &amp; 2 \end{bmatrix} = (1)(8 - 9) = -1</m>
+            </p>
+            <p>Therefore: <m>\det(A) = 1(-1) + 2(2) + 3(-1) = -1 + 4 - 3 = 0</m>
+            </p>
+            <p>Using column 2: <m>\det(A) = 2\mathop{\mathrm{cof}}(A)_{12} + 3\mathop{\mathrm{cof}}(A)_{22} + 2\mathop{\mathrm{cof}}(A)_{32}</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{12} = (-1)^{1+2}\det\begin{bmatrix} 4 &amp; 2 \\ 3 &amp; 1 \end{bmatrix} = (-1)(4\cdot 1 - 2\cdot 3) = 2</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{22} = (-1)^{2+2}\det\begin{bmatrix} 1 &amp; 3 \\ 3 &amp; 1 \end{bmatrix} = (1)(1\cdot 1 - 3\cdot 3) = -8</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{32} = (-1)^{3+2}\det\begin{bmatrix} 1 &amp; 3 \\ 4 &amp; 2 \end{bmatrix} = (-1)(2 - 12) = 10</m>
+            </p>
+            <p>
+              <m>\det(A) = 2(2) + 3(-8) + 2(10) = 4 - 24 + 20 = 0</m>
+            </p>
+            <p>
+              <m>\begin{bmatrix} + &amp; - &amp; + \\ - &amp; + &amp; - \\ + &amp; - &amp; + \end{bmatrix}</m>
+            </p>
+          </solution>
+        </activity>
+        <p>Note: Since the row/column doesn’t matter, you should choose the <q>easiest</q> row/column:</p>
+        <activity xml:id="activity-determinant-zero-row">
+          <statement>
+            <p>
+              <m>\det\left(\begin{bmatrix} 3 &amp;-5 &amp; 1\\ 0 &amp; 1 &amp; 0 \\ -2 &amp; -4 &amp; 7\end{bmatrix}\right)</m>
+            </p>
+            <p>
+              <m>\det\left(\begin{bmatrix} 0 &amp; \pi &amp; 200\\ 0 &amp; 0.03 &amp; 4 \\ 0 &amp; 19 &amp; -3584\end{bmatrix}\right)</m>
+            </p>
+          </statement>
+          <solution>
+            <p>Using row 2 (has two zeros): <m>\det(A) = 0\cdot\mathop{\mathrm{cof}}(A)_{21} + 1\cdot\mathop{\mathrm{cof}}(A)_{22} + 0\cdot\mathop{\mathrm{cof}}(A)_{23}</m>
+            </p>
+            <p>
+              <m>\mathop{\mathrm{cof}}(A)_{22} = (-1)^{2+2}\det\begin{bmatrix} 3 &amp; 1\\ -2 &amp; 7\end{bmatrix}</m>
+              <m>= (1)(3\cdot 7 - 1\cdot(-2))</m>
+              <m>= 21 + 2 = 23</m>. Therefore <m>\det(A) = 23</m>
+            </p>
+            <p>Using column 1 (all zeros): <m>\det(A) = 0\cdot\mathop{\mathrm{cof}}(A)_{11} + 0\cdot\mathop{\mathrm{cof}}(A)_{21} + 0\cdot\mathop{\mathrm{cof}}(A)_{31} = 0</m>
+            </p>
+            <p>Note: When a row or column is all zeros, the determinant is automatically 0. We didn’t need to calculate the cofactors.</p>
+          </solution>
+        </activity>
+        <p>We can compute the determinant of a general <m>n\times n</m> matrix by recursively repeating this process:</p>
+        <activity xml:id="c3-activity-n10">
+          <statement>
+            <p>
+              <m>A=\begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\ 5 &amp; 4 &amp; 2 &amp; 3\\ 1 &amp; 3 &amp; 4 &amp; 5 \\ 3 &amp; 4 &amp; 3 &amp; 2\end{bmatrix}</m>, if we expand along third column, we get</p>
+          </statement>
+          <solution>
+            <p>
+              <me>\begin{aligned}
+    &amp;\det(A)=3(-1)^{1+3}\det\left(\begin{bmatrix} 5 &amp; 4 &amp; 3 \\ 1 &amp; 3 &amp; 5\\ 3 &amp; 4 &amp; 2\end{bmatrix}\right)\\
+    &amp;+2(-1)^{2+3}\det\left(\begin{bmatrix} 1 &amp; 2 &amp; 4\\ 1 &amp; 3 &amp; 5\\ 3 &amp; 4 &amp; 2\end{bmatrix}\right)\\
+    &amp;+4(-1)^{3+3}\det\left(\begin{bmatrix} 1 &amp; 2 &amp; 4\\ 5 &amp;4 &amp; 3\\ 3 &amp; 4 &amp; 2\end{bmatrix}\right)\\
+    &amp;+3(-1)^{4+3}\det\left(\begin{bmatrix} 1 &amp; 2 &amp; 4\\ 5 &amp; 4 &amp; 3\\ 1 &amp; 3 &amp; 5\end{bmatrix}\right)=-12.
+\end{aligned}</me>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c3-definition-n11">
+          <statement>
+            <p>Let <m>A</m> be a <m>n\times n</m> matrix (<m>n\geq 3)</m>. Then the <alert>determinant</alert> of <m>A</m>, <m>\det(A)</m>, is</p>
+            <p>
+              <me>\det(A)=\sum_{j=1}^n a_{ij}\mathop{\mathrm{cof}}(A)_{ij}=\sum_{i=1}^n a_{ij}\mathop{\mathrm{cof}}(A)_{ij}</me>
+            </p>
+            <p>for some choice of row <m>i</m> or column <m>j</m>.</p>
+          </statement>
+        </definition>
+        <activity xml:id="activity-triangular-determinant">
+          <statement>
+            <p>Compute <m>\det(A)</m> for <m>A = \begin{bmatrix} 3 &amp; 2 &amp; 3 &amp; 4 \\ 0 &amp; 4 &amp; 2 &amp; 3\\ 0 &amp; 0 &amp; 2 &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; -1\end{bmatrix}</m>
+            </p>
+          </statement>
+          <solution>
+            <p>Using column 1 (3 zeros): <m>\det(A) = 3\cdot\mathop{\mathrm{cof}}(A)_{11} + 0\cdot\mathop{\mathrm{cof}}(A)_{21} + 0\cdot\mathop{\mathrm{cof}}(A)_{31} + 0\cdot\mathop{\mathrm{cof}}(A)_{41}</m>
+              <m>= 3\cdot\mathop{\mathrm{cof}}(A)_{11}</m>
+              <m>= 3\cdot(-1)^{1+1}\det\begin{bmatrix} 4 &amp; 2 &amp; 3\\ 0 &amp; 2 &amp; 5\\ 0 &amp; 0 &amp; -1\end{bmatrix}</m>
+            </p>
+            <p>Looking at this <m>3\times 3</m> determinant, use column 1 again: <m>= 3\cdot(1)\cdot[4\cdot\det\begin{bmatrix} 2 &amp; 5\\ 0 &amp; -1\end{bmatrix}]</m>
+              <m>= 3\cdot 4\cdot[2\cdot(-1) - 5\cdot 0]</m>
+              <m>= 3\cdot 4\cdot(-2)</m>
+              <m>= -24</m>
+            </p>
+            <p>Alternative justification: Since <m>A</m> is upper triangular, <m>\det(A)</m> is the product of diagonal entries: <m>\det(A) = 3\cdot 4\cdot 2\cdot(-1) = -24</m>
+            </p>
+          </solution>
+        </activity>
+        <definition xml:id="c3-definition-n13">
+          <statement>
+            <p>The <alert>main diagonal</alert> of an <m>{n \times n}</m> matrix <m>A</m> is the set of entries <m>(a_{11}, a_{22}, \ldots , a_{nn})</m>.</p>
+          </statement>
+        </definition>
+        <definition xml:id="c3-definition-n14">
+          <statement>
+            <p>An <m>{n \times n}</m> matrix <m>A = [{a_{ij}}]</m> is called <alert>upper triangular</alert> if <alert>
+                <m>a_{ij} = 0</m>
+              </alert> for <m>i&gt;j</m>, and <m>A</m> is called <alert>lower triangular</alert> if <alert>
+                <m>a_{ij} = 0</m>
+              </alert> for <m>i &lt; j</m>. A <alert>diagonal matrix</alert> is both upper and lower triangular.</p>
+          </statement>
+        </definition>
+        <theorem xml:id="c3-theorem-n15">
+          <statement>
+            <p>If <m>A=[a_{ij}]</m> is a upper/lower triangular matrix, then <m>\det(A)=a_{11}a_{22}\cdots a_{nn}</m>, that is, the determinant of a triangular matrix is the product of the elements on the <alert>main diagonal</alert>.</p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>See Activity <xref ref="activity-triangular-determinant" text="global" />.</p>
+          </statement>
+        </theorem>
+        <p>
+          <alert>Properties of Determinants</alert>
+        </p>
+        <theorem xml:id="c3-theorem-n16">
+          <statement>
+            <p>If a row (column) of <m>A</m> consists entirely of zeros, then <m>\det(A)=0</m>.</p>
+            <p>
+              <alert>Why is it true?</alert>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>See Activity <xref ref="activity-determinant-zero-row" text="global" />.</p>
+          </statement>
+        </theorem>
+        <theorem xml:id="c3-theorem-n17">
+          <statement>
+            <p>If <m>B</m> results from <m>A</m> by interchanging two different rows (or two different columns), then <m>\det(B)=-\det(A)</m>.</p>
+            <p>
+              <alert>Why is it true?</alert>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>Check for <m>2 \times 2</m>: <m>A=\begin{bmatrix}a &amp; b \\ c &amp; d \end{bmatrix}</m> and <m>\det(A)=ad-bc.</m> OTOH, <m>B=\begin{bmatrix}c &amp; d \\ a &amp; b \end{bmatrix}</m> and <m>\det(B)= cb - ad = -(ad-bc).</m>
+            </p>
+          </statement>
+        </theorem>
+        <theorem xml:id="c3-theorem-n18">
+          <statement>
+            <p>If two rows (columns) of <m>A</m> are equal,then <m>\det(A)=0</m>.</p>
+            <p>
+              <alert>Why is it true?</alert>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>Let <m>B</m> be the matrix obtained by interchanging these two equal rows. Then <m>B=A</m> (since the rows were equal) but also <m>\det(B)=-\det(A)</m> (by the previous theorem about row interchanges). Therefore: <m>\det(A) = \det(B) = -\det(A)</m>. This implies <m>2\det(A) = 0</m>, so <m>\det(A) = 0</m>.</p>
+          </statement>
+        </theorem>
+        <theorem xml:id="c3-theorem-n19">
+          <statement>
+            <p>If <m>B</m> is obtained from <m>A</m> by multiplying a row (column) of <m>A</m> by a real number <m>k</m>, then <m>\det(B)=k\det(A)</m>.</p>
+            <p>
+              <alert>Why is it true?</alert>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>Suppose row <m>i</m> is multiplied by <m>k</m>. Expand along that row <me>\begin{aligned}
+    &amp;\det(k A)=k a_{i1}\mathop{\mathrm{cof}}(kA)_{i1}+ k a_{i2}\mathop{\mathrm{cof}}(kA)_{i2}+k a_{i3}\mathop{\mathrm{cof}}(kA)_{i3}\\
+    &amp; =k a_{i1}\mathop{\mathrm{cof}}(A)_{i1}+ k a_{i2}\mathop{\mathrm{cof}}(A)_{i2}+k a_{i3}\mathop{\mathrm{cof}}(A)_{i3} = k \det(A)
+\end{aligned}</me> since <m>\mathop{\mathrm{cof}}(kA)_{ij}</m> does not depend on the <m>i</m>-th row.</p>
+          </statement>
+        </theorem>
+        <axiom xml:id="c3-fact-n20">
+          <statement>
+            <p>If <m>A</m> is an <m>n\times n</m> matrix, then <m>\det(k A)=</m>
+              <alert>
+                <m>k^n \det(A)</m>
+              </alert>.</p>
+          </statement>
+        </axiom>
+        <theorem xml:id="c3-theorem-n21">
+          <statement>
+            <p>If <m>B</m> is obtained by adding <m>k</m> times the <m>i</m>th row of <m>A</m> to the <m>j</m>th row (<m>i\neq j</m>), written as <m>R_j \to R_j + k R_i</m>, then <m>\det(A)=\det(B)</m>.</p>
+            <p>Check for <m>2\times 2</m>: <m>\det\left(\begin{bmatrix}a &amp; b \\ c &amp; d \end{bmatrix}\right) =</m>
+              <alert>
+                <m>ad-bc</m>
+              </alert>
+            </p>
+            <p>
+              <m>\det\left(\begin{bmatrix}a &amp; b \\ ka+c &amp; kb+d \end{bmatrix}\right) =</m>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>
+              <m>a(kb+d)-b(ka+c) = akb + ad - bka - bc = ad-bc</m>
+            </p>
+            <p>
+              <alert>Row Operations and the Determinant:</alert> Here is a summary of how the elementary row operations affect the determinant:</p>
+            <p>
+              <ol marker="1.">
+                <li>
+                  <p>Type I (scaling): <m>R_i \to kR_i</m> multiplies determinant by <m>k</m>
+                  </p>
+                </li>
+                <li>
+                  <p>Type II (interchange): <m>R_i \leftrightarrow R_j</m> multiplies determinant by <m>-1</m>
+                  </p>
+                </li>
+                <li>
+                  <p>Type III (replacement): <m>R_j \to R_j + kR_i</m> leaves determinant unchanged</p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </theorem>
+        <activity xml:id="c3-activity-n22">
+          <statement>
+            <p>If <m>B</m> is obtained from <m>A</m> by the following operations: <m>R_1 \leftrightarrow R_2</m>, <m>R_4 \to 4R_4</m>, and <m>R_3 \to R_3 + 3R_2</m>, and <m>\det(A)=8</m>, what is the determinant of <m>B</m>?</p>
+          </statement>
+          <solution>
+            <p>
+              <m>R_1 \leftrightarrow R_2</m>: multiplies det by <m>-1</m>
+            </p>
+            <p>
+              <m>R_4 \to 4R_4</m>: multiplies det by <m>4</m>
+            </p>
+            <p>
+              <m>R_3 \to R_3 + 3R_2</m>: no change in det</p>
+            <p>Therefore <m>\det(B) = -1 \cdot 4 \cdot 1 \cdot \det(A) = -32</m>
+            </p>
+          </solution>
+        </activity>
+        <activity xml:id="c3-activity-n23">
+          <statement>
+            <p>Compute the determinant of the matrix <m>B = {\left[ \begin{array}{rrr} 1 &amp; 2 &amp; 1 \\ -1 &amp; 3 &amp; 3 \\ 0 &amp; 15 &amp; 12 \end{array} \right]}</m>
+            </p>
+          </statement>
+          <solution>
+            <p>Use row operations to make the matrix upper triangular:</p>
+            <p>
+              <m>B = \begin{bmatrix} 1 &amp; 2 &amp; 1\\ -1 &amp; 3 &amp; 3\\ 0 &amp; 15 &amp; 12\end{bmatrix}</m>
+            </p>
+            <p>
+              <m>R_2 \to R_2 + R_1</m>: <m>\begin{bmatrix} 1 &amp; 2 &amp; 1\\ 0 &amp; 5 &amp; 4\\ 0 &amp; 15 &amp; 12\end{bmatrix}</m>
+            </p>
+            <p>
+              <m>R_3 \to R_3 - 3R_2</m>: <m>\begin{bmatrix} 1 &amp; 2 &amp; 1\\ 0 &amp; 5 &amp; 4\\ 0 &amp; 0 &amp; 0\end{bmatrix}</m>
+            </p>
+            <p>Now we have an upper triangular matrix. The determinant is <m>0</m> because we have a row of zeros.</p>
+          </solution>
+        </activity>
+      </section>
+      <section xml:id="section-3-2">
+        <title>Determinants and Matrix Inverses</title>
+        <theorem xml:id="c3-theorem-n24">
+          <statement>
+            <p>If <m>A</m> and <m>B</m> are <m>{n \times n}</m> matrices, then <m>\det(AB)=</m>
+              <alert>
+                <m>\det(A) \det(B)</m>
+              </alert>.</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c3-activity-n25">
+          <statement>
+            <p>Compute the determinant of <m>A</m>, <m>B</m>, <m>C</m>, <m>AC</m>, and <m>BC</m>, where <m>A</m>, <m>B</m>, and <m>C</m> are the matrices <me>A = {\left[ \begin{array}{rr} 3 &amp; 1 \\ -2 &amp; 7 \end{array} \right]},
+\: 
+B = {\left[ \begin{array}{rr} 1 &amp; 2 \\ 2 &amp; 4 \end{array} \right]},
+\text{ and } 
+C = {\left[ \begin{array}{rr} 1 &amp; 4 \\ 0 &amp; 2 \end{array} \right]}.</me> Confirm (if time) that <m>\det(AC) = \det(A)\det(C)</m> and <m>\det(BC) = \det(B)\det(C)</m>.</p>
+          </statement>
+          <solution>
+            <p>For <m>A</m>: <m>\det(A) = 3(7) - 1(-2) = 23</m>
+            </p>
+            <p>For <m>B</m>: <m>\det(B) = 1(4) - 2(2) = 0</m>
+            </p>
+            <p>For <m>C</m>: <m>\det(C) = 1(2) - 4(0) = 2</m>
+            </p>
+            <p>For <m>AC</m>: <m>AC = \begin{bmatrix} 3 &amp; 1\\ -2 &amp; 7\end{bmatrix}\begin{bmatrix} 1 &amp; 4\\ 0 &amp; 2\end{bmatrix} = \begin{bmatrix} 3 &amp; 14\\ -2 &amp; 6\end{bmatrix}</m>, <m>\det(AC) = 3(6) - 14(-2) = 18 + 28 = 46</m>. And indeed <m>\det(A)\det(C) = 23 \cdot 2 = 46</m>
+            </p>
+            <p>For <m>BC</m>: <m>BC = \begin{bmatrix} 1 &amp; 2\\ 2 &amp; 4\end{bmatrix}\begin{bmatrix} 1 &amp; 4\\ 0 &amp; 2\end{bmatrix} = \begin{bmatrix} 1 &amp; 8\\ 2 &amp; 16\end{bmatrix}</m>, <m>\det(BC) = 1(16) - 8(2) = 0</m>. And indeed <m>\det(B)\det(C) = 0 \cdot 2 = 0</m>.</p>
+          </solution>
+        </activity>
+        <theorem xml:id="c3-theorem-n26">
+          <statement>
+            <p>If <m>A</m> is an <m>{n \times n}</m> matrix, then <m>A</m> is <alert>nonsingular</alert> if and only if <m>\det(A)</m>
+              <alert>
+                <m>\ne 0</m>
+              </alert>. In this case, <m>\det(A^{-1})=\dfrac{1}{\det(A)}</m>.</p>
+            <p>
+              <em>Proof:</em>
+            </p>
+            <p>
+              <em>Answer.</em>
+            </p>
+            <p>(<m>\Rightarrow</m>) Assume <m>A</m> is nonsingular. Then <m>AA^{-1} = I</m>. Taking determinants of both sides: <m>\det(AA^{-1}) = \det(I)</m> so simplifying <m>\det(A)\det(A^{-1}) = 1</m>. Therefore <m>\det(A) \neq 0</m> and <m>\det(A^{-1}) = \frac{1}{\det(A)}</m>.</p>
+          </statement>
+        </theorem>
+        <theorem xml:id="c3-theorem-n27">
+          <statement>
+            <p>If <m>A</m> is a square matrix, then <m>\det(A)=\det(A^T)</m>.</p>
+          </statement>
+        </theorem>
+        <activity xml:id="c3-activity-n28">
+          <statement>
+            <p>Let <m>A</m> be a square matrix. A matrix is called orthogonal if <m>A^{-1} = A^T</m>. What are the possible values of <m>\det A</m> if <m>A</m> is orthogonal?</p>
+          </statement>
+          <solution>
+            <p>If <m>A</m> is orthogonal, we have <m>I = AA^T</m>. Taking determinants of both sides:</p>
+            <p>
+              <m>1 = \det(I) = \det(AA^T) = \det(A)\det(A^T) = \det(A)\det(A) = (\det A)^2</m>
+            </p>
+            <p>Therefore, <m>\det A = \pm 1</m>.</p>
+          </solution>
+        </activity>
+      </section>
+    </chapter>
+  </book>
+</pretext>

@@ -1,0 +1,68 @@
+name: Build and deploy PreTeXt notes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Notes/**'
+      - 'scripts/generate_pretext.py'
+      - 'scripts/preview_pretext.py'
+      - 'scripts/verify_pretext.py'
+      - 'PreTeXt/project.ptx'
+      - 'PreTeXt/publication/**'
+      - 'PreTeXt/requirements.txt'
+      - '.github/workflows/pretext-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pretext-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: PreTeXt/requirements.txt
+      - name: Install Pandoc, TikZ, and PreTeXt
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends pandoc texlive-latex-extra texlive-pictures dvisvgm
+          python -m pip install -r PreTeXt/requirements.txt
+      - name: Generate and validate HTML from the original TeX
+        run: python scripts/preview_pretext.py --build-only
+      - name: Retain build diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pretext-build-log
+          path: PreTeXt/build.log
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: PreTeXt/output/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Publish notes
+        id: deployment
+        uses: actions/deploy-pages@v4
